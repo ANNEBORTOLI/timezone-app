@@ -14,7 +14,7 @@ class User < ApplicationRecord
   private
 
   def all_contacts
-    connections.map { |connection| connection.contact }
+    connections.map(&:contact) # connections.map { |connection| connection.contact }
   end
 
   def full_name

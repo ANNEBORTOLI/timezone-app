@@ -7,8 +7,6 @@ class Connection < ApplicationRecord
   private
 
   def different_user_and_contact
-    if user_id == contact_id
-      errors.add(:base, "User and contact must be different")
-    end
+    errors.add(:base, "User and contact must be different") if user_id == contact_id
   end
 end
