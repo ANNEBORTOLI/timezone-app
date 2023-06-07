@@ -15,8 +15,14 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
+    @group.user = current_user
+    contacts = @group.contact_ids
+    array = params[:group][:contact_ids]
+    array.each_with_index do |member, index|
+      contacts.push(member.to_i) if index > 0
+    end
     if @group.save
-      redirect_to @group, notice: 'Group was successfully created.'
+      redirect_to group_path(@group), notice: 'Group was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end

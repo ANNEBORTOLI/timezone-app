@@ -1,0 +1,9 @@
+<h1><%= @group.title %></h1>
+<p>Owner: <%= @group.user.full_name %></p>
+
+<p>Members:</p>
+<ul>
+  <% @group.contact_ids.each do |id| %>
+    <li><%= User.find(id).full_name %></li>
+    <% end %>
+</ul>
