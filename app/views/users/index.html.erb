@@ -1,0 +1,6 @@
+<h1>All Users</h1>
+<p>here we can see all of our app users</p>
+
+<% @users.each do |user| %>
+  <p>Name: <%= user.first_name %> <%= user.last_name %></p>
+<% end %>

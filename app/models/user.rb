@@ -8,8 +8,9 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :first_name, :last_name, :city, :country, presence: true
+  validates :first_name, :last_name, :address, presence: true
   validates :phone, length: { maximum: 15 }
+  validates :latitude, :longitude, presence: true
 
   private
 
