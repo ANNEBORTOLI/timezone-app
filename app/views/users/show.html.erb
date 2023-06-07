@@ -1,8 +1,29 @@
-<h1>User Profile (view show)</h1>
 
-<h5>User info</h5>
-<p><%= @user.first_name %> <%= @user.last_name %></p>
-<p><%= @user.address %></p>
+<body>
+ <h1 class="personal px-7 py-4">User Profile (view show)</h1>
+  <div class="card">
+    <div class="photo"></div>
+    <div class="banner"></div>
+      <div class="personal justify-center">
+          <ul>
+            <li><strong><%= @user.first_name %> <%= @user.last_name %></strong></li>
+            <li><%= @user.address %></li>
+          </ul>
+      </div>
+      <button class="contact" id="main-button">click to get in touch</button>
+
+
+    <div class="social-media-banner justify-center">
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-instagram"></i></a>
+      <a href=""><i class="fa fa-linkedin"></i></a>
+    </div>
+
+
+  </div>
+</body>
+
 
 
 <h5>User Connection</h5>
