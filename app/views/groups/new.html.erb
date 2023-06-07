@@ -3,7 +3,7 @@
     <h1 class= "my-4">Add a new Group</h1>
     <%= simple_form_for @group do |f| %>
       <%= f.input :title %>
-      <%= f.input :contact_ids, collection: @connections, label_method: :full_name, prompt: 'Select a contact'  %>
+      <%= f.input :contact_ids, collection: @connections, label_method: :full_name, input_html: { multiple: true, data: { controller: "tom-select" } }  %>
       <div class= "d-flex justify-content-center gap-3">
         <%= f.button :submit, class: "btn btn-primary" %>
       </div>
