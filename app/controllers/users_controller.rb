@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     # User can see all Users to be able to add new connections
     @users = User.all

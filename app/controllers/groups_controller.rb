@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @connections = current_user.all_contacts
     @group = Group.new
   end
 
@@ -44,6 +45,6 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:title, :user_id)
+    params.require(:group).permit(:title, :contact_ids)
   end
 end

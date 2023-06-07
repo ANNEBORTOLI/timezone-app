@@ -12,7 +12,6 @@ class User < ApplicationRecord
   validates :phone, length: { maximum: 15 }
   validates :latitude, :longitude, presence: true
 
-  private
 
   def all_contacts
     connections.map(&:contact) # connections.map { |connection| connection.contact }
