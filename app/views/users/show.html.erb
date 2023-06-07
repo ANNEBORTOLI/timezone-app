@@ -4,6 +4,7 @@
 <p><%= @user.first_name %> <%= @user.last_name %></p>
 <p><%= @user.address %></p>
 
+
 <h5>User Connection</h5>
 <% @connections.each do |connection|  %>
   <p>Name: <%= connection.contact.first_name %></p>
@@ -12,9 +13,13 @@
 
 <h5>User Groups</h5>
 <% @groups.each do |group|  %>
+  <a href="<%= group_path(group) %>">
   <p>Title: <%= group.title %></p>
   <% group.contact_ids.each do |member| %>
     <% user = User.find(member)  %>
-    <p><%= user.first_name %></p>
+    <p>Member: <%= user.first_name %></p>
   <% end %>
 <% end %>
+
+<%= link_to "Create new Group",  new_group_path, class: "btn btn-primary" %>
+<%= link_to "Add a new connection",  new_connection_path, class: "btn btn-primary" %>
