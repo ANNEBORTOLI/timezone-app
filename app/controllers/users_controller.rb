@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     # 1 - Get current_user info
     @user = User.find(current_user.id)
     # 2 - Get all the current_user connections
-    # @connections = Connection.where(user: current_user)
+    @connections = Connection.where(user: current_user)
     # 2 - Get all the groups created by current_user
-    # @groups = Groups.where(user: current_user)
+    @groups = Group.where(user: current_user)
   end
 
   def new

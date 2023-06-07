@@ -3,3 +3,18 @@
 <h5>User info</h5>
 <p><%= @user.first_name %> <%= @user.last_name %></p>
 <p><%= @user.address %></p>
+
+<h5>User Connection</h5>
+<% @connections.each do |connection|  %>
+  <p>Name: <%= connection.contact.first_name %></p>
+<% end %>
+
+
+<h5>User Groups</h5>
+<% @groups.each do |group|  %>
+  <p>Title: <%= group.title %></p>
+  <% group.contact_ids.each do |member| %>
+    <% user = User.find(member)  %>
+    <p><%= user.first_name %></p>
+  <% end %>
+<% end %>
