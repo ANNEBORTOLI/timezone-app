@@ -7,6 +7,6 @@ class Group < ApplicationRecord
   private
 
   def user_not_included_in_contacts
-    errors.add(:base, "User already in group") if contact_ids.include(user_id)
+    errors.add(:base, "User already in group") if contact_ids.include?(user_id)
   end
 end

@@ -7,11 +7,11 @@ class UsersController < ApplicationController
 
   def show
     # 1 - Get current_user info
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     # 2 - Get all the current_user connections
-    @connections = Connection.where(user: current_user)
+    # @connections = Connection.where(user: current_user)
     # 2 - Get all the groups created by current_user
-    @groups = Groups.where(user: current_user)
+    # @groups = Groups.where(user: current_user)
   end
 
   def new
@@ -43,5 +43,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     redirect_to root_path, notice: "Account was successfully destroyed.", status: :see_other
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(
+      :first_name, :last_name, :working_hour_start, :working_hour_end,
+      :timezone, :phone, :latitude, :longitude, :address)
   end
 end
