@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   end
   resources :connections, only: %i[new create destroy]
   resources :groups
+  get 'test', to: 'pages#test'
 end
