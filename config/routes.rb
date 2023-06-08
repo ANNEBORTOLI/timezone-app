@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users, only: %i[index show]
   resources :connections, only: %i[new create destroy]
   resources :groups
+  get 'test', to: 'pages#test'
 end
