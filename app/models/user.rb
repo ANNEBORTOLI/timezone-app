@@ -10,8 +10,9 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :first_name, :last_name, :address, presence: true
   validates :phone, length: { maximum: 15 }
-  validates :latitude, :longitude, presence: true
-
+  # validates :latitude, :longitude, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   def all_contacts
     connections.map(&:contact) # connections.map { |connection| connection.contact }

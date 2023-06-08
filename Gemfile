@@ -6,6 +6,9 @@ ruby "3.1.2"
 # Gemfile
 gem "devise"
 
+# Geocoder
+gem "geocoder"
+
 # Gemfile Faker
 # gem "faker"
 
