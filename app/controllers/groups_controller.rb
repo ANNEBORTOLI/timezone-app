@@ -29,10 +29,16 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    @selected = @group.contact_ids
+    @selected_for_tomselect = User.where(id: @selected)
+    @connections = current_user.all_contacts
   end
 
   def update
-    if @group.update(group_params)
+    array = params[:group][:contact_ids]
+    new_ids = array.map { |element| element.to_i unless element == "" }.compact
+
+    if @group.update(group_params.merge(contact_ids: new_ids))
       redirect_to @group, notice: 'Group was successfully updated.'
     else
       render :edit, status: :unprocessable_entity

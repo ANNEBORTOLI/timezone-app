@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   def edit
   end
 
+
   def update
     if @user.update(user_params)
       redirect_to @user, notice: "User was successfully updated."
@@ -42,6 +43,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     redirect_to root_path, notice: "Account was successfully destroyed.", status: :see_other
+  end
+
+  def profile
+    # 1 - Get current_user info
+    @user = User.find(current_user.id)
+    # 2 - Get all the current_user connections
+    @connections = Connection.where(user: current_user)
+    # 2 - Get all the groups created by current_user
+    @groups = Group.where(user: current_user)
   end
 
   private
