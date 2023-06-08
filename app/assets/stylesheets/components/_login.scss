@@ -1,0 +1,61 @@
+
+
+.personal {
+  background-color: #F5F5F5;
+  height: 250px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+
+}
+
+.personalsign {
+  background-color: #F5F5F5;
+  height: 300px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+
+}
+
+#main-button-log {
+  margin-top: 15px;
+}
+
+.cardlog {
+  z-index: 1;
+  display: right;
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 204px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+
+}
+
+.bannerlog {
+  z-index: 1;
+  position: relative;
+  margin-top: -154px;
+  width: 100%;
+  height: 100px;
+  background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
+  background-size: cover;
+  border-bottom: solid 1px lightgrey;
+}
+
+.form-inputs-log {
+  padding: 35px;
+
+
+}
+
+.body {
+  background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
+
+}
