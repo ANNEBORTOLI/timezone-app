@@ -14,6 +14,16 @@ class User < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+
+  # timezone = Timezone.lookup(-34.92771808058, 138.477041423321)
+  # #<Timezone::Zone name: "Australia/Adelaide">
+
+  # timezone.name
+  # #"Australia/Adelaide"
+
+  # timezone.utc_to_local(Time.now)
+  # #2011-02-12 12:02:13 UTC
+
   def all_contacts
     connections.map(&:contact) # connections.map { |connection| connection.contact }
   end
