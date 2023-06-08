@@ -24,9 +24,9 @@
   z-index: 1;
   display: right;
   width: 400px;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
-  margin-top: 204px;
+  margin-top: 180px;
   background-color: white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -51,11 +51,19 @@
 
 .form-inputs-log {
   padding: 35px;
-
-
+  color:black;
 }
 
-.body {
-  background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
+.banner2 {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
+  height: 100vh;
+}
 
+.description{
+color: #F5F5F5;
+text-align:left;
+padding:25px;
+font-size: 55px;
 }
