@@ -101,7 +101,7 @@ User.create!(
   email: "marcos@lewagon.com",
   password: "123456",
   phone: "21-96583-2390",
-  address: "Barra da Tijuca, Rio de Janeiro - State of Rio de Janeiro",
+  address: "4 York St, Sydney NSW 2000, Australia",
   working_hour_start: 8,
   working_hour_end: 12
 )
