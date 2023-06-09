@@ -204,6 +204,21 @@ Connection.create!(
   contact: marcos
 )
 
+Connection.create!(
+  user: chloe,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: chloe,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: chloe,
+  contact: marcos
+)
+
 puts "Creating groups..."
 
 Group.create!(
