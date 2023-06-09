@@ -22,7 +22,6 @@
 
 .cardlog {
   z-index: 1;
-  display: right;
   width: 400px;
   height: 400px;
   margin: 0 auto;
@@ -35,18 +34,21 @@
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   -ms-transition: all 0.7s ease-in-out;
+  border-radius: 5px;
 
 }
 
 .bannerlog {
   z-index: 1;
   position: relative;
-  margin-top: -154px;
+  margin-top: -100px;
   width: 100%;
-  height: 100px;
+  height: 90px;
   background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
   background-size: cover;
   border-bottom: solid 1px lightgrey;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .form-inputs-log {
@@ -57,7 +59,7 @@
 .banner2 {
   display:grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 10px;
   height: 100vh;
 }
 
@@ -66,4 +68,5 @@ color: #F5F5F5;
 text-align:left;
 padding:25px;
 font-size: 55px;
+margin-top: 40px;
 }
