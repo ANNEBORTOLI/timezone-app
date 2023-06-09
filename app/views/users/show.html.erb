@@ -24,8 +24,11 @@
 </div>
 
 <h5>User Connection</h5>
-<% @connections.each do |connection|  %>
-  <p>Name: <%= connection.contact.first_name %></p>
+<% @availabilities.each do |connection|  %>
+  <p>Name: <%= connection.first_name %></p>
+  <p>Timezone: <%= connection.timezone %></p>
+  <p>W.H Start: <%= connection.working_hour_start %></p>
+  <p>W.H End: <%= connection.working_hour_end %></p>
 <% end %>
 
 

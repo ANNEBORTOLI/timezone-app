@@ -6,6 +6,12 @@ ruby "3.1.2"
 # Gemfile
 gem "devise"
 
+# Geocoder
+gem "geocoder"
+
+# Timezone Gem
+gem 'timezone', '~> 1.0'
+
 # Gemfile Faker
 # gem "faker"
 

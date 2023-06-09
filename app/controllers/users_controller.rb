@@ -1,17 +1,23 @@
 class UsersController < ApplicationController
+
   def index
-    # User can see all Users to be able to add new connections
     @users = User.all
   end
 
   def show
-    # 1 - Get current_user info
     @user = User.find(current_user.id)
     @contact = User.find(params[:id])
     # 2 - Get all the current_user connections
     @connections = Connection.where(user: current_user)
-    # 2 - Get all the groups created by current_user
     @groups = Group.where(user: current_user)
+    # TODO: call set_connections_availability
+    @availabilities = [current_user]
+    @connections.each do |connection|
+      user_offset = current_user.offset - connection.contact.offset
+      connection.contact.working_hour_start = adjust_to_24_hours(connection.contact.working_hour_start + user_offset)
+      connection.contact.working_hour_end = adjust_to_24_hours(connection.contact.working_hour_end + user_offset)
+      @availabilities.push(connection.contact)
+    end
   end
 
   def new
@@ -31,7 +37,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-
   def update
     if @user.update(user_params)
       redirect_to @user, notice: "User was successfully updated."
@@ -47,12 +52,30 @@ class UsersController < ApplicationController
   end
 
   def profile
-    # 1 - Get current_user info
     @user = User.find(current_user.id)
-    # 2 - Get all the current_user connections
     @connections = Connection.where(user: current_user)
-    # 2 - Get all the groups created by current_user
     @groups = Group.where(user: current_user)
+  end
+
+  # Methods to convert timezones
+  def set_connections_availability
+    @connections = Connection.where(user: current_user)
+    @availabilities = [current_user]
+    @connections.each do |connection|
+      user_offset = current_user.offset - connection.contact.offset
+      connection.contact.working_hour_start = adjust_to_24_hours(connection.contact.working_hour_start + user_offset)
+      connection.contact.working_hour_end = adjust_to_24_hours(connection.contact.working_hour_end + user_offset)
+      @availabilities.push(connection.contact)
+    end
+  end
+
+  def adjust_to_24_hours(hour)
+    if hour > 23
+      hour -= 24
+    elsif hour.negative?
+      hour += 24
+    end
+    hour
   end
 
   private
@@ -60,6 +83,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(
       :first_name, :last_name, :working_hour_start, :working_hour_end,
-      :timezone, :phone, :latitude, :longitude, :address)
+      :timezone, :phone, :latitude, :longitude, :address, :offset)
   end
 end
