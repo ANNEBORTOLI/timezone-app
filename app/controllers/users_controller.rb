@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def show
     # 1 - Get current_user info
     @user = User.find(current_user.id)
+    @contact = User.find(params[:id])
     # 2 - Get all the current_user connections
     @connections = Connection.where(user: current_user)
     # 2 - Get all the groups created by current_user

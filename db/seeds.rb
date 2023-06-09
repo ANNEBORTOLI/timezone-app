@@ -154,6 +154,7 @@ chloe = User.find(12)
 
 puts "Creating connections..."
 
+# Bruno Contacts
 Connection.create!(
   user: bruno,
   contact: anne
@@ -163,6 +164,27 @@ Connection.create!(
   user: bruno,
   contact: ara
 )
+
+Connection.create!(
+  user: bruno,
+  contact: augusto
+)
+
+Connection.create!(
+  user: bruno,
+  contact: chloe
+)
+
+Connection.create!(
+  user: bruno,
+  contact: antonio
+)
+
+Connection.create!(
+  user: bruno,
+  contact: carla
+)
+
 
 Connection.create!(
   user: anne,
@@ -209,7 +231,7 @@ puts "Creating groups..."
 Group.create!(
   user: bruno,
   title: "Grupo do Bruno",
-  contact_ids: [anne.id, ara.id]
+  contact_ids: [anne.id, ara.id, augusto.id, carla.id, chloe.id]
 )
 
 Group.create!(

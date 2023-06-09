@@ -1,13 +1,15 @@
-
-<body>
-  <h1 class="px-7 py-4">User Profile (view show)</h1>
+<h1 class="px-7 py-4">User Profile (view show)</h1>
   <div class="card">
     <div class="photo"></div>
     <div class="banner"></div>
       <div class="personal justify-center">
           <ul>
-            <li><strong><%= @user.first_name %> <%= @user.last_name %></strong></li>
-            <li><%= @user.address %></li>
+            <li><strong><%= "#{@contact.first_name} #{@contact.last_name}" %></strong></li>
+            <li><%= @contact.address %></li>
+            <li>
+            <%= @contact.working_hour_start %>:00 |
+            <%= @contact.working_hour_end %> :00
+            </li>
           </ul>
       </div>
       <button class="contact" id="main-button">click to get in touch</button>
@@ -19,8 +21,7 @@
       <a href=""><i class="fa fa-instagram"></i></a>
       <a href=""><i class="fa fa-linkedin"></i></a>
     </div>
-  </div>
-</body>
+</div>
 
 <h5>User Connection</h5>
 <% @connections.each do |connection|  %>

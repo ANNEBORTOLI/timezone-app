@@ -1,3 +1,5 @@
+
+
 <h1><%= @group.title %></h1>
 <p>Owner: <%= @group.user.full_name %></p>
 
@@ -8,4 +10,4 @@
     <% end %>
 </ul>
 
-<%= link_to "Edit",  new_group_path, class: "btn btn-primary" %>
+<%= link_to "Edit",  edit_group_path, class: "btn btn-primary" %>
