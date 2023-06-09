@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
+    @contact = User.find(params[:id])
+    # 2 - Get all the current_user connections
     @connections = Connection.where(user: current_user)
     @groups = Group.where(user: current_user)
     # TODO: call set_connections_availability
