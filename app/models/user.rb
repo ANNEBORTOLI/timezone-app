@@ -10,8 +10,17 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :first_name, :last_name, :address, presence: true
   validates :phone, length: { maximum: 15 }
-  validates :latitude, :longitude, presence: true
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
+  before_save :set_timezone_and_offset
+
+  def set_timezone_and_offset
+    timezone_obj = Timezone.lookup(latitude, longitude)
+    self.timezone = timezone_obj.name
+    self.offset = timezone_obj.utc_offset / 3600 # from seconds to hours
+  end
 
   def all_contacts
     connections.map(&:contact) # connections.map { |connection| connection.contact }
@@ -22,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def working_hours_validity
-    if working_hour_start.present? && working_hour_end.present? && working_hour_start >= working_hour_end
+    if (working_hour_start.present? && working_hour_end.present?) && (working_hour_start < working_hour_end)
       errors.add(:working_hour_start, "must be before working_hour_end")
     end
   end
