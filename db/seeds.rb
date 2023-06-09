@@ -14,8 +14,6 @@ User.create!(
   password: "123456",
   phone: "21-99856-1330",
   address: "R. Visc. de Pirajá, 130 - Ipanema, Rio de Janeiro - RJ",
-  # latitude: -22.984548,
-  # longitude: -43.199217
   working_hour_start: 8,
   working_hour_end: 12
 )
@@ -27,8 +25,6 @@ User.create!(
   password: "123456",
   phone: "21-96547-1330",
   address: "16 Vla Gaudelet, 75011 Paris, France",
-  # latitude: 48.864911,
-  # longitude: 2.380165
   working_hour_start: 14,
   working_hour_end: 22
 )
@@ -40,8 +36,6 @@ User.create!(
   password: "123456",
   phone: "21-96347-1435",
   address: "4 York St, Sydney NSW 2000, Australia",
-  # latitude: -33.865140,
-  # longitude: 151.205629
   working_hour_start: 2,
   working_hour_end: 15
 )
