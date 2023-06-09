@@ -14,18 +14,12 @@ class User < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  before_save :set_timezone
+  before_save :set_timezone_and_offset
 
-  def set_timezone
-    # timezone = Timezone.lookup(-34.92771808058, 138.477041423321)
-    # #<Timezone::Zone name: "Australia/Adelaide">
-    timezone = Timezone.lookup(latitude, longitude)
-    raise
-    # timezone.name
-    # #"Australia/Adelaide"
-
-    # timezone.utc_to_local(Time.now)
-    # #2011-02-12 12:02:13 UTC
+  def set_timezone_and_offset
+    timezone_obj = Timezone.lookup(latitude, longitude)
+    self.timezone = timezone_obj.name
+    self.offset = timezone_obj.utc_offset / 3600 # from seconds to hours
   end
 
   def all_contacts
@@ -37,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def working_hours_validity
-    if working_hour_start.present? && working_hour_end.present? && working_hour_start >= working_hour_end
+    if (working_hour_start.present? && working_hour_end.present?) && (working_hour_start < working_hour_end)
       errors.add(:working_hour_start, "must be before working_hour_end")
     end
   end
