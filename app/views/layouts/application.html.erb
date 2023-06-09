@@ -11,7 +11,7 @@
 
   <body>
     <%= render "shared/flashes" %>
-    <%= render "shared/navbar" %>
+    <%= render "shared/navbar" if current_user %>
     <%= yield %>
   </body>
 </html>
