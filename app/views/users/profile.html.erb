@@ -1,6 +1,6 @@
 <div class="cointainer">
 <div class="groups">
-
+  <%# GROUPS THAT USERS CREATED %>
   <div>
     <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-end fw-bold">My Groups</h4>
     <% @groups.each do |group| %>
@@ -28,41 +28,37 @@
           </li>
         <% end %>
       </ul>
-
   </div>
 
-  <%# <h6 class="bg-light p-2 border-top border-bottom">Design group</h6>
-  <ul class="list-group list-group-light">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-      <img src="https://mdbootstrap.com/img/new/avatars/9.jpg" alt="" style="width: 45px; height: 45px"
-        class="rounded-circle" />
-      <div class="ms-3">
-        <p class="fw-bold mb-1">Ara Gallardo</p>
-        <p class="text-muted mb-0">soraya.letto@gmail.com</p>
-      </div>
-    </div>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-      <img src="https://mdbootstrap.com/img/new/avatars/11.jpg" class="rounded-circle" alt=""
-        style="width: 45px; height: 45px" />
-      <div class="ms-3">
-        <p class="fw-bold mb-1">Zeynep Dudley</p>
-        <p class="text-muted mb-0">zeynep.dudley@gmail.com</p>
-      </div>
-    </div>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-      <img src="https://mdbootstrap.com/img/new/avatars/15.jpg" class="rounded-circle" alt=""
-        style="width: 45px; height: 45px" />
-      <div class="ms-3">
-        <p class="fw-bold mb-1">Ayat Black</p>
-        <p class="text-muted mb-0">ayat.black@gmail.com</p>
-      </div>
-    </div>
-  </li> %>
+<%# GROUPS THAT USERS ARE PARTICIPATING %>
+  <div>
+    <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-end fw-bold">Participating Groups</h4>
+    <% @other_groups.each do |group| %>
+      <h6 class="bg-light p-2 border-top border-bottom">
+         <a href="<%= group_path(group) %>">
+        <%= group.title %>
+      </h6>
+      <ul class="list-group list-group-light mb-5">
+       <% group.contact_ids.each do |member| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
+                style="width: 45px; height: 45px" />
+              <% user = User.find(member)  %>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">
+                  <%= "#{user.first_name} #{user.last_name}" %>
+                </p>
+                <p class="text-muted mb-0">
+                  <%= user.email %>
+                </p>
+              </div>
+             <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+  </div>
   </ul>
 </div>
 
