@@ -1,37 +1,43 @@
-<div class="cointainer">
 <div class="groups">
   <%# GROUPS THAT USERS CREATED %>
   <div>
-    <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-end fw-bold">My Groups</h4>
+    <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-center fw-bold">My Groups</h4>
     <% @groups.each do |group| %>
-      <h6 class="bg-light p-2 border-top border-bottom">
-         <a href="<%= group_path(group) %>">
-         <div class="groupindividual">
-          <%= group.title %>
-          <i class="fa-regular fa-pen-to-square"></i>
+      <h6 class="bg-light p-2 border-top border-bottom d-flex justify-content-between" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <%= group.title %>
+        <div>
+        <a href="<%= edit_group_path(group) %>"> <i class="fa-regular fa-pen-to-square"></i></a>
+        <a href="<%= group_path(group) %>"> <i class="fa-regular fa-comment"></i></a>
         </div>
+
       </h6>
-      <ul class="list-group list-group-light mb-5">
-       <% group.contact_ids.each do |member| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
-                style="width: 45px; height: 45px" />
-              <% user = User.find(member)  %>
-              <div class="ms-3">
-                <p class="fw-bold mb-1">
-                  <%= "#{user.first_name} #{user.last_name}" %>
-                </p>
-                <p class="text-muted mb-0">
-                  <%= user.email %>
-                </p>
-              </div>
-             <% end %>
-            </div>
-          </li>
-        <% end %>
-      </ul>
+          <div class="accordion-body">
+            <ul class="list-group list-group-light mb-5">
+            <% group.contact_ids.each do |member| %>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample" style="">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
+                      style="width: 45px; height: 45px" />
+                    <% user = User.find(member)  %>
+                    <div class="ms-3">
+                      <p class="fw-bold mb-1">
+                        <%= "#{user.first_name} #{user.last_name}" %>
+                      </p>
+                      <p class="text-muted mb-0">
+                        <%= user.email %>
+                      </p>
+                    </div>
+                  <% end %>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
   </div>
+</div>
   <%# <h6 class="bg-light p-2 border-top border-bottom">Design group</h6>
   <ul class="list-group list-group-light">
   <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -115,3 +121,4 @@
         <input type="text" id="searchfield" value="Search contacts..." />
     </div> %>
   </div>
+</div>
