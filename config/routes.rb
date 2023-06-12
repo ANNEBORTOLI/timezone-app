@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "users#profile"
 
-  resources :users, only: %i[index show] do
+  resources :users, only: %i[index edit update show] do
     collection do
       get :profile
     end
