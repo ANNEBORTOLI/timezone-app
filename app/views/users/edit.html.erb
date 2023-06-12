@@ -1,13 +1,21 @@
-<h1>Edit profile</h1>
-
-<div class="container row justify-content-center">
-  <div style="width: 60rem; height: 100vh ">
-    <h1 class= "my-4">Updating User profile</h1>
-    <%= simple_form_for @user do |f| %>
-      <%= f.input :address %>
-      <%= f.input :working_hour_start %>
-      <%= f.input :working_hour_end %>
-        <%= f.button :submit, class: "btn btn-primary" %>
-    <% end %>
+<div class="global">
+  <div class="edit-cointainer">
+    <h1 class="titleedit">Edit profile <i class="fa-solid fa-user-pen"></i> </h1>
+      <div id="formedit">
+        <div class="container row justify-content-center">
+          <div style="width: 60rem; height: 100vh ">
+            <%= simple_form_for @user do |f| %>
+              <%= f.input :address %>
+              <%= f.input :working_hour_start %>
+              <%= f.input :working_hour_end %>
+                <%= f.button :submit, class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
   </div>
- </div>
+
+  <div class="edit-cointainer2" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80);">
+
+  <div>
+</div>
