@@ -7,10 +7,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @contact = User.find(params[:id])
-    # 2 - Get all the current_user connections
     @connections = Connection.where(user: current_user)
     @groups = Group.where(user: current_user)
-    # TODO: call set_connections_availability
     @availabilities = [current_user]
     @connections.each do |connection|
       user_offset = current_user.offset - connection.contact.offset
@@ -62,6 +60,14 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
     @connections = Connection.where(user: current_user)
     @groups = Group.where(user: current_user)
+    @other_groups = Group.where("contact_ids @> ?", "{ #{current_user.id} }")
+    @availabilities = [current_user]
+    @connections.each do |connection|
+      user_offset = current_user.offset - connection.contact.offset
+      connection.contact.working_hour_start = adjust_to_24_hours(connection.contact.working_hour_start + user_offset)
+      connection.contact.working_hour_end = adjust_to_24_hours(connection.contact.working_hour_end + user_offset)
+      @availabilities.push(connection.contact)
+    end
   end
 
   # Methods to convert timezones

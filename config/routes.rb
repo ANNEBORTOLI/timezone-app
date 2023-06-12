@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       get :profile
     end
   end
+
   resources :connections, only: %i[new create destroy]
-  resources :groups
-  get 'test', to: 'pages#test'
+  resources :groups do
+    resources :messages, only: :create
+  end
+
+  # get 'test', to: 'pages#test'
 end
