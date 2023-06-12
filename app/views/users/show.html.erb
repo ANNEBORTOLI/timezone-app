@@ -21,25 +21,3 @@
       <a href=""><i class="fa-brands fa-linkedin"></i></a>
     </div>
 </div>
-
-<h5>User Connection</h5>
-<% @availabilities.each do |connection|  %>
-  <p>Name: <%= connection.first_name %></p>
-  <p>Timezone: <%= connection.timezone %></p>
-  <p>W.H Start: <%= connection.working_hour_start %></p>
-  <p>W.H End: <%= connection.working_hour_end %></p>
-<% end %>
-
-
-<h5>User Groups</h5>
-<% @groups.each do |group|  %>
-  <a href="<%= group_path(group) %>">
-  <p>Title: <%= group.title %></p>
-  <% group.contact_ids.each do |member| %>
-    <% user = User.find(member)  %>
-    <p>Member: <%= user.first_name %></p>
-  <% end %>
-<% end %>
-
-<%= link_to "Create new Group",  new_group_path, class: "btn btn-primary" %>
-<%= link_to "Add a new connection",  new_connection_path, class: "btn btn-primary" %>

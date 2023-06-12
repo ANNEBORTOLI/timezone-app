@@ -171,13 +171,22 @@ body {
 }
 
 
-.message .bubble{
-	background:#f0f4f7;
-	font-size:13px;
-	font-weight:600;
-	padding:12px 13px;
-	border-radius:5px 5px 5px 0px;
-	color:#8495a3;
-	position:relative;
-	float:left;
-}
+ .contactshow {
+   font-weight: bolder;
+   font-size: 15px;
+   display: grid;
+
+   color: #394867;
+   margin-top: 10px;
+   grid-template-columns: 1fr 1fr;
+ }
+
+ .groupindividual i {
+   margin-left: 190px;
+
+ }
+
+ .group {
+   padding-left: 20px;
+
+ }
