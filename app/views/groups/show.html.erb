@@ -1,13 +1,29 @@
+<div class="container chatroom"
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @group.id %>"
+  data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+  <h1>#<%= @group.title %></h1>
+
+<div class="messages" data-chatroom-subscription-target="messages">
+  <% @group.messages.each do |message| %>
+    <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+      <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+        <%= render "messages/message", message: message %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 
-<h1><%= @group.title %></h1>
-<p>Owner: <%= @group.user.full_name %></p>
-
-<p>Members:</p>
-<ul>
-  <% @group.contact_ids.each do |id| %>
-    <li><%= User.find(id).full_name %></li>
-    <% end %>
-</ul>
-
-<%= link_to "Edit",  edit_group_path, class: "btn btn-primary" %>
+<%# INPUT PARA ENVIAR MSG %>
+  <%= simple_form_for [@group, @message],
+    html: {data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex"} do |f|
+  %>
+    <%= f.input :content,
+      label: false,
+      placeholder: "Message ##{@group.title}",
+      wrapper_html: {class: "flex-grow-1"}
+    %>
+    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+  <% end %>
+</div>

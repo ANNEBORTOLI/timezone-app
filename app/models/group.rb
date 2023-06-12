@@ -1,5 +1,6 @@
 class Group < ApplicationRecord
   belongs_to :user
+  has_many :messages
 
   validates :title, presence: true
   validate :user_not_included_in_contacts
