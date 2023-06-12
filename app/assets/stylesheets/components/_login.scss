@@ -1,18 +1,20 @@
 
 
 .personal {
-  background-color: #F5F5F5;
   height: 250px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 40px;
-
+  background-color: rgba(255, 255, 255, .15);
 }
 
 .personalsign {
-  background-color: #F5F5F5;
   height: 300px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.687);
+  backdrop-filter: blur(5px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
 }
 
@@ -26,7 +28,7 @@
   height: 400px;
   margin: 0 auto;
   margin-top: 180px;
-  background-color: white;
+  // background-color: white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -35,6 +37,8 @@
   -o-transition: all 0.7s ease-in-out;
   -ms-transition: all 0.7s ease-in-out;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
 
 }
 
@@ -43,10 +47,9 @@
   position: relative;
   margin-top: -100px;
   width: 100%;
-  height: 90px;
-  background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
-  background-size: cover;
-  border-bottom: solid 1px lightgrey;
+  height: 100px;
+  background-size:cover;
+  border-bottom: solid 1px rgb(7, 4, 4);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -54,6 +57,7 @@
 .form-inputs-log {
   padding: 35px;
   color:black;
+  margin-left: 10px;
 }
 
 .banner2 {
@@ -66,7 +70,11 @@
 .description{
 color: #F5F5F5;
 text-align:left;
-padding:25px;
-font-size: 55px;
-margin-top: 40px;
+padding:15px;
+font-size: 45px;
+margin-top: 85px;
+}
+
+.bottom {
+  margin-left: 35px;
 }

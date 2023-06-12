@@ -54,8 +54,6 @@ class UsersController < ApplicationController
     @connections = Connection.where(user: current_user)
     @groups = Group.where(user: current_user)
     @other_groups = Group.where("contact_ids @> ?", "{ #{current_user.id} }")
-    # @groups = Group.where(contact_ids: [current_user])
-    # @groups = Group.find_by_sql("SELECT * FROM Groups WHERE 1 = ANY (contact_ids)")
   end
 
   # Methods to convert timezones
