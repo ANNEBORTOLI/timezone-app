@@ -176,3 +176,22 @@ button.contact:focus {
   text-align: center;
   /*    color: black;*/
 }
+ .contactshow {
+  font-weight: bolder;
+  font-size: 15px;
+  display: grid;
+
+  color:#394867;
+  margin-top: 10px;
+  grid-template-columns: 1fr 1fr;
+ }
+
+ .groupindividual i {
+  margin-left: 190px;
+
+ }
+
+ .group {
+   padding-left: 20px;
+
+ }
