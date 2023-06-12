@@ -5,8 +5,15 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.group = @group
     @message.user = current_user
+
     if @message.save
-      redirect_to group_path(@group)
+      ChatroomChannel.broadcast_to(
+        @group,
+        message: render_to_string(partial: "message", locals: { message: @message }),
+        sender_id: @message.user.id
+      )
+      head :ok
+      # redirect_to group_path(@group)
     else
       render "group/show", status: :unprocessable_entity
     end

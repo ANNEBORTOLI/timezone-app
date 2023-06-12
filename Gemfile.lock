@@ -201,11 +201,7 @@ GEM
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
-<<<<<<< HEAD
     selenium-webdriver (4.10.0)
-=======
-    selenium-webdriver (4.9.1)
->>>>>>> 76c7361575905eb384cd9634e02cd0e3ad5d9c81
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
