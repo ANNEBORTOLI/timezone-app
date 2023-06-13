@@ -1,117 +1,110 @@
 <div class="cointainer" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1636955816868-fcb881e57954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);">
-<div class="groups">
-  <%# GROUPS THAT USERS CREATED %>
-  <div>
-    <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-end fw-bold">My Groups</h4>
-    <% @groups.each do |group| %>
-      <h6 class="bg-light p-2 border-top border-bottom">
-         <a href="<%= group_path(group) %>">
-         <div class="groupindividual">
-          <%= group.title %>
-          <i class="fa-regular fa-pen-to-square"></i>
-        </div>
-      </h6>
-      <ul class="list-group list-group-light mb-5">
-       <% group.contact_ids.each do |member| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
-                style="width: 45px; height: 45px" />
-              <% user = User.find(member)  %>
-              <div class="ms-3">
-                <p class="fw-bold mb-1">
-                  <%= "#{user.first_name} #{user.last_name}" %>
-                </p>
-                <p class="text-muted mb-0">
-                  <%= user.email %>
-                </p>
+  <div class="groups">
+    <div class="groupone">
+      <div class="accordion" id="accordionExample">
+        <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-center fw-bold">My Groups</h4>
+
+          <% @groups.each do |group| %>
+            <div class="accordion-item">
+              <h6 class="accordion-header bg-light p-2 border-top border-bottom">
+                <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <div class="groupindividual d-flex justify-content-between">
+                    <%= group.title %>
+                      <div>
+                      <a href="<%= edit_group_path(group) %>"> <i class="fa-regular fa-pen-to-square"></i></a>
+                      <a href="<%= group_path(group) %>"> <i class="fa-regular fa-comment"></i></a>
+                      </div>
+                  </div>
+                </div>
+            </h6>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+              <div class="accordion-body">
+                <ul class="list-group list-group-light mb-5">
+                  <% group.contact_ids.each do |member| %>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                        <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
+                          style="width: 45px; height: 45px" />
+                        <% user = User.find(member)  %>
+                        <div class="ms-3">
+                          <p class="fw-bold mb-1">
+                            <%= "#{user.first_name} #{user.last_name}" %>
+                          </p>
+                          <p class="text-muted mb-0">
+                            <%= user.email %>
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
               </div>
-             <% end %>
             </div>
-          </li>
-        <% end %>
-      </ul>
+          <% end %>
+      </div>
+    </div>
+
+    <div class="grouptwo">
+      <div class="accordion" id="accordionExample">
+        <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-center fw-bold">Participating Groups</h4>
+          <% @other_groups.each do |group| %>
+            <div class="accordion-item">
+                <h6 class="accordion-header bg-light p-2 border-top border-bottom">
+                  <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="groupindividual d-flex justify-content-between">
+                      <%= group.title %>
+                      <div>
+                        <a href="<%= group_path(group) %>"> <i class="fa-regular fa-comment"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </h6>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                  <div class="accordion-body">
+                    <ul class="list-group list-group-light mb-5">
+                      <% group.contact_ids.each do |member| %>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt="" style="width: 45px; height: 45px" />
+                            <% user = User.find(member)  %>
+                            <div class="ms-3">
+                              <p class="fw-bold mb-1">
+                                <%= "#{user.first_name} #{user.last_name}" %>
+                              </p>
+                              <p class="text-muted mb-0">
+                                <%= user.email %>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+          <% end %>
+      </div>
+    </div>
   </div>
-  <%# <h6 class="bg-light p-2 border-top border-bottom">Design group</h6>
-  <ul class="list-group list-group-light">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-      <img src="https://mdbootstrap.com/img/new/avatars/9.jpg" alt="" style="width: 45px; height: 45px"
-        class="rounded-circle" />
-      <div class="ms-3">
-        <p class="fw-bold mb-1">Ara Gallardo</p>
-        <p class="text-muted mb-0">soraya.letto@gmail.com</p>
+
+  <div id="chatbox">
+    <div id="friendslist">
+      <div id="topmenu">
+          <span class="friends"></span>
       </div>
-    </div>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-      <img src="https://mdbootstrap.com/img/new/avatars/11.jpg" class="rounded-circle" alt=""
-        style="width: 45px; height: 45px" />
-      <div class="ms-3">
-        <p class="fw-bold mb-1">Zeynep Dudley</p>
-        <p class="text-muted mb-0">zeynep.dudley@gmail.com</p>
-      </div>
-    </div>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-      <img src="https://mdbootstrap.com/img/new/avatars/15.jpg" class="rounded-circle" alt=""
-        style="width: 45px; height: 45px" />
-      <div class="ms-3">
-        <p class="fw-bold mb-1">Ayat Black</p>
-        <p class="text-muted mb-0">ayat.black@gmail.com</p>
-      </div>
-    </div>
-  </li> %>
 
-<div id="chatbox">
-	<div id="friendslist">
-    <div id="topmenu">
-        <span class="friends"></span>
+      <% @connections.each do |connection|  %>
+        <div class="friend">
+          <a href="<%= user_path(connection.contact) %>">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2_copy.jpg" />
+          <p class="contactshow d-flex justify-content-between">
+            <strong><%= "#{connection.contact.first_name} #{connection.contact.last_name}" %></strong>
+              <p class="contactshow d-flex justify-content-between">
+                <%= connection.contact.working_hour_start%> :00 | <%= connection.contact.working_hour_end%> :00
+              </p>
+          </p>
+          <div class="status available"></div>
+        </div>
+      <% end %>
     </div>
-
-    <% @connections.each do |connection|  %>
-      <div class="friend">
-        <a href="<%= user_path(connection.contact) %>">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2_copy.jpg" />
-        <p class="contactshow d-flex justify-content-between">
-          <strong><%= "#{connection.contact.first_name} #{connection.contact.last_name}" %></strong>
-            <p class="contactshow d-flex justify-content-between">
-              <%= connection.contact.working_hour_start%> :00 | <%= connection.contact.working_hour_end%> :00
-            </p>
-        </p>
-        <div class="status available"></div>
-      </div>
-    <% end %>
-
-    <%# <div class="friend">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3_copy.jpg" />
-        <p>
-          <strong>Tomas Kennedy</strong>
-          <span>tomaskennedy@gmail.com</span>
-        </p>
-        <div class="status inactive"></div>
-    </div>
-
-    <div class="friend">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/4_copy.jpg" />
-        <p>
-          <strong>Enrique	Sutton</strong>
-          <span>enriquesutton@gmail.com</span>
-        </p>
-        <div class="status inactive"></div>
-    </div>
-
-    <div class="friend">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/5_copy.jpg" />
-        <p>
-        <strong>	Darnell	Strickland</strong>
-          <span>darnellstrickland@gmail.com</span>
-        </p>
-        <div class="status inactive"></div>
-    </div>
-    <div id="search">
-        <input type="text" id="searchfield" value="Search contacts..." />
-    </div> %>
   </div>
+</div>

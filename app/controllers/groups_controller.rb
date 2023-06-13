@@ -7,6 +7,15 @@ class GroupsController < ApplicationController
 
   def show
     @message = Message.new
+    # TODO
+    @availabilities = [current_user]
+    @group.contact_ids.each do |member|
+      user = User.find(member)
+      user_offset = current_user.offset - user.offset
+      user.working_hour_start = adjust_to_24_hours(user.working_hour_start + user_offset)
+      user.working_hour_end = adjust_to_24_hours(user.working_hour_end + user_offset)
+      @availabilities.push(user)
+    end
   end
 
   def new
@@ -49,6 +58,15 @@ class GroupsController < ApplicationController
   def destroy
     @group.destroy
     redirect_to @user, notice: 'Group was successfully destroyed.'
+  end
+
+  def adjust_to_24_hours(hour)
+    if hour > 23
+      hour -= 24
+    elsif hour.negative?
+      hour += 24
+    end
+    hour
   end
 
   private
