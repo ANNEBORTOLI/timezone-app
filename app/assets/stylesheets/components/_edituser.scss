@@ -16,6 +16,24 @@
   transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
 }
 
+.btn-primary-chat {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  font-size: 15px;
+  height: 40px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  background: linear-gradient(90deg, #5522fa 0, #0074e4 100%);
+  border-radius: 50px;
+  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
 .titleedit {
   text-align:left;
   font-size: 40px;
