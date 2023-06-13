@@ -90,12 +90,6 @@
     <div id="friendslist">
       <div id="topmenu">
           <span class="friends"></span>
-          <div>
-          <%= form_with url: users_path, method: :get, class: "d-flex justify-content-center mb-4" do %>
-          <%= text_field_tag :query, params[:query], class: "form-control w-50"%>
-          <%= submit_tag "Search", address: "", class: "btn btn-primary-azul px-5 py-3" %>
-          <% end %>
-          </div>
       </div>
 
       <% @connections.each do |connection|  %>
