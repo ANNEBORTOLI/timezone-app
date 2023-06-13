@@ -7,14 +7,18 @@ class GroupsController < ApplicationController
 
   def show
     @message = Message.new
-    # TODO
     @availabilities = [current_user]
     @group.contact_ids.each do |member|
       user = User.find(member)
-      user_offset = current_user.offset - user.offset
-      user.working_hour_start = adjust_to_24_hours(user.working_hour_start + user_offset)
-      user.working_hour_end = adjust_to_24_hours(user.working_hour_end + user_offset)
-      @availabilities.push(user)
+      if current_user != user
+        user_offset = current_user.offset - user.offset
+        user.working_hour_start = adjust_to_24_hours(user.working_hour_start + user_offset)
+        user.working_hour_end = adjust_to_24_hours(user.working_hour_end + user_offset)
+        @availabilities.push(user)
+      end
+    end
+    if current_user != @group.user
+      @availabilities.push(@group.user)
     end
   end
 
