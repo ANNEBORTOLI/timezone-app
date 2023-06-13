@@ -1,3 +1,52 @@
+
+<%= current_user.timezone %>
+<table>
+  <tr>
+    <th>User</th>
+    <% (0..23).each do |hour|%>
+      <th><%= hour %>:00</th>
+    <% end %>
+  </tr>
+  <% @availabilities.each do |user| %>
+  <% if user.working_hour_start != nil && user.working_hour_end != nil %>
+    <tr>
+      <td colspan="25"> </td>
+    </tr>
+      <% if user.working_hour_start < user.working_hour_end %>
+      <tr>
+        <td><%=user.first_name%></td>
+        <% (0..user.working_hour_start-1).each do |hour| %>
+          <td>-</td>
+        <% end %>
+        <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
+          <td class="available">-</td>
+        <% end %>
+        <% (user.working_hour_end..23).each do |hour| %>
+          <td>-</td>
+        <% end %>
+      </tr>
+      <% else %>
+      <tr>
+        <td><%=user.first_name%></td>
+        <% (0..user.working_hour_end-1).each do |hour| %>
+          <td class="available">-</td>
+        <% end %>
+        <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
+          <td>-</td>
+        <% end %>
+        <% (user.working_hour_start..23).each do |hour| %>
+          <td class="available">-</td>
+        <% end %>
+      </tr>
+      <% end %>
+    <% end %>
+  <% end %>
+</table>
+
+<% @availabilities.each do |user| %>
+  <%= user.first_name%> / <%= user.working_hour_start%> : <%= user.working_hour_end%><br>
+<% end %>
+
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @group.id %>"
@@ -13,8 +62,6 @@
     </div>
   <% end %>
 </div>
-
-
 <%# INPUT PARA ENVIAR MSG %>
   <%= simple_form_for [@group, @message],
     html: {data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex"} do |f|
