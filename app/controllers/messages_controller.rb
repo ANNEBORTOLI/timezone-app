@@ -13,9 +13,9 @@ class MessagesController < ApplicationController
         sender_id: @message.user.id
       )
       head :ok
-      redirect_to group_path(@group)
-    else
-      render "group/show", status: :unprocessable_entity
+    #   redirect_to group_path(@group)
+    # else
+    #   render "group/show", status: :unprocessable_entity
     end
   end
 
