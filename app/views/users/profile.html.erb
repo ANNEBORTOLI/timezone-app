@@ -1,4 +1,4 @@
-<div class="cointainer" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1636955816868-fcb881e57954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);">
+<div>
   <div class="groups">
     <div class="groupone">
       <div class="accordion" id="accordionExample">
@@ -10,11 +10,9 @@
                 <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   <div class="groupindividual d-flex justify-content-between">
                     <%= group.title %>
-                      <div>
-                      <a href="<%= edit_group_path(group) %>"> <i class="fa-regular fa-pen-to-square"></i></a>
-                      <a href="<%= group_path(group) %>"> <i class="fa-regular fa-comment"></i></a>
+                      <div><a href="<%= edit_group_path(group) %>"> <i class="fa-regular fa-pen-to-square"></i></a>
+                        <div><a href="<%= group_path(group) %>"><i class="fa-regular fa-comment"></i></a></div>
                       </div>
-                  </div>
                 </div>
             </h6>
             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
