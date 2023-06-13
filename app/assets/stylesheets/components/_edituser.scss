@@ -1,0 +1,72 @@
+.btn-primary {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  font-size: 22px;
+  height: 50px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  background: linear-gradient(90deg, #5522fa 0, #0074e4 100%);
+  border-radius: 50px;
+  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.titleedit {
+  text-align:left;
+  font-size: 40px;
+  color:#5522fa;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+#formedit {
+  color:#5522fa;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 700px;
+  height: 300px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.edit-cointainer {
+  /* From https://css.glass */
+  width: 750px;
+  height: 500px;
+  background: rgba(238, 232, 232, 0.458);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 70px;
+  margin-left: 55px;
+}
+
+.edit-cointainer2 {
+  /* From https://css.glass */
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 70px;
+  margin-right: 55px;
+  background-size: cover;
+
+}
+
+.global {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2px;
+  height: 100vh;
+}
