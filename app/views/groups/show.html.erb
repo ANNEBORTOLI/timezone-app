@@ -1,6 +1,6 @@
-<div class="container d-flex">
+<div class="d-flex mt-2 ">
   <%# CHAT %>
-  <div class="container chatroom chat"
+  <div class="container chatroom chat-container"
       data-controller="chatroom-subscription"
       data-chatroom-subscription-chatroom-id-value="<%= @group.id %>"
       data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
@@ -25,9 +25,10 @@
     <% end %>
   </div>
 
-  <table>
+
+  <table class="members-table">
     <tr>
-      <th>Groups Members</th>
+      <th>Members</th>
       <% (0..23).each do |hour|%>
         <th><%= hour %>:00</th>
       <% end %>
@@ -35,7 +36,7 @@
     <% @availabilities.each do |user| %>
     <% if user.working_hour_start != nil && user.working_hour_end != nil %>
       <tr>
-        <td colspan="25"> </td>
+        <td colspan="25"></td>
       </tr>
       <% if user.working_hour_start < user.working_hour_end %>
         <tr>
@@ -44,7 +45,7 @@
             <td>--</td>
           <% end %>
           <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
-            <td class="available">-</td>
+            <td class="available">--</td>
           <% end %>
           <% (user.working_hour_end..23).each do |hour| %>
             <td>-</td>
@@ -54,7 +55,7 @@
         <tr>
           <td><%="#{user.first_name} #{user.last_name}"%></td>
           <% (0..user.working_hour_end-1).each do |hour| %>
-            <td class="available">-</td>
+            <td class="available">--</td>
           <% end %>
           <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
             <td>--</td>
@@ -68,3 +69,5 @@
     <% end %>
   </table>
 </div>
+
+<div class="modal-dialog modal-xl">...</div>
