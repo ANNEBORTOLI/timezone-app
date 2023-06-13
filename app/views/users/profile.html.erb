@@ -7,15 +7,14 @@
           <% @groups.each do |group| %>
             <div class="accordion-item">
               <h6 class="accordion-header bg-light p-2 border-top border-bottom">
-                <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <div class="groupindividual d-flex justify-content-between">
-                    <%= group.title %>
-                      <div><a href="<%= edit_group_path(group) %>"> <i class="fa-regular fa-pen-to-square"></i></a>
-                        <div><a href="<%= group_path(group) %>"><i class="fa-regular fa-comment"></i></a></div>
-                      </div>
+                <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne<%= group.id %>" aria-expanded="false" aria-controls="collapseOne<%= group.id %>">
+                  <div class="d-flex justify-content-between">
+                    <div><%= group.title %> <i class="fa-solid fa-crown" style="color: #c7a423;"></i></div>
+                    <div><%= link_to edit_group_path(group), class: "link-with-icon mx-2" do %><i class="fa-regular fa-pen-to-square"></i><% end %><%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %></div>
+                  </div>
                 </div>
             </h6>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+            <div id="collapseOne<%= group.id %>" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
               <div class="accordion-body">
                 <ul class="list-group list-group-light mb-5">
                   <% group.contact_ids.each do |member| %>
@@ -44,12 +43,11 @@
 
     <div class="grouptwo">
       <div class="accordion" id="accordionExample">
-        <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-center fw-bold">Participating Groups</h4>
           <% @other_groups.each do |group| %>
             <div class="accordion-item">
                 <h6 class="accordion-header bg-light p-2 border-top border-bottom">
-                  <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <div class="groupindividual d-flex justify-content-between">
+                  <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne<%= group.id %>" aria-expanded="false" aria-controls="collapseOne<%= group.id %>">
+                    <div class="d-flex justify-content-between">
                       <%= group.title %>
                       <div>
                         <a href="<%= group_path(group) %>"> <i class="fa-regular fa-comment"></i></a>
@@ -57,7 +55,7 @@
                     </div>
                   </div>
                 </h6>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                <div id="collapseOne<%= group.id %>" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
                   <div class="accordion-body">
                     <ul class="list-group list-group-light mb-5">
                       <% group.contact_ids.each do |member| %>

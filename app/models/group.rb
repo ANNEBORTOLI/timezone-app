@@ -2,7 +2,7 @@ class Group < ApplicationRecord
   belongs_to :user
   has_many :messages
 
-  validates :title, presence: true
+  validates :title, presence: true, length: { maximum: 20, too_long: "%{count} characters is the maximum allowed" }
   validate :user_not_included_in_contacts
 
   private
