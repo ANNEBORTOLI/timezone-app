@@ -2,7 +2,7 @@
   <div class="groups">
     <div class="groupone">
       <div class="accordion" id="accordionExample">
-        <h4 class="bg-light p-4 my-2 border-top border-bottom d-flex justify-content-center fw-bold">My Groups</h4>
+        <h4 class="my-groups bg-light p-4 my-2 d-flex justify-content-center fw-bold">My Groups</h4>
 
           <% @groups.each do |group| %>
             <div class="accordion-item">
@@ -104,9 +104,12 @@
     <div id="friendslist">
       <div id="topmenu">
         <span class="friends"></span>
-        <input type="text" id="searchBar" onkeyup="searchFriends()" placeholder="Search contacts...">
+          <div id="gradient"></div>
+            <div class="searchbox">
+                <input type="search" id="searchBar" onkeyup="searchFriends()" placeholder="Search contacts...">
+                <button type="submit" value="search">&nbsp;</button>
+            </div>
       </div>
-
       <% @connections.each do |connection|  %>
         <div class="friend">
           <a href="<%= user_path(connection.contact) %>">
