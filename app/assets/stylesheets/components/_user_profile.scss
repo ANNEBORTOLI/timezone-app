@@ -57,10 +57,28 @@ a {
   height: 150px;
   width: 150px;
   margin: 0 auto;
-  background-image: url("https://filmshotfreezer.files.wordpress.com/2011/07/untitled-1.jpg");
   background-size: cover;
   background-position: 50% 50%;
   top: 100px;
+  -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: top 0.7s ease-in-out, background 0.15s ease;
+  -moz-transition: top 0.7s ease-in-out, background 0.15s ease;
+  -o-transition: top 0.7s ease-in-out, background 0.15s ease;
+  -ms-transition: top 0.7s ease-in-out, background 0.15s ease;
+}
+
+.contact-photo {
+  z-index: 3;
+  position: relative;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background-image: url("https://filmshotfreezer.files.wordpress.com/2011/07/untitled-1.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
   -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3);

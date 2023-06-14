@@ -24,9 +24,8 @@
                   <% group.contact_ids.each do |member| %>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                       <div class="d-flex align-items-center">
-                        <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
-                          style="width: 45px; height: 45px" />
                         <% user = User.find(member)  %>
+                        <%= image_tag "#{user.image}", class: "avatar", alt: "dropdown menu" %>
                         <div class="ms-3">
                           <p class="fw-bold mb-1">
                             <%= "#{user.first_name} #{user.last_name}" %>
@@ -111,7 +110,7 @@
       <% @connections.each do |connection|  %>
         <div class="friend">
           <a href="<%= user_path(connection.contact) %>">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2_copy.jpg" />
+          <%= image_tag "#{connection.contact.image}", class: "avatar", alt: "dropdown menu" %>
           <p class="contactshow d-flex justify-content-between">
             <strong><%= "#{connection.contact.first_name} #{connection.contact.last_name}" %></strong>
               <p class="contactshow d-flex justify-content-between">
