@@ -60,8 +60,9 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    @group = Group.find(params[:id])
     @group.destroy
-    redirect_to @user, notice: 'Group was successfully destroyed.'
+    redirect_to root_path, notice: 'Group was successfully destroyed.'
   end
 
   def adjust_to_24_hours(hour)

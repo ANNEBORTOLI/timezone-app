@@ -13,6 +13,7 @@
                     <div>
                       <%= link_to edit_group_path(group), class: "link-with-icon mx-2" do %><i class="fa-regular fa-pen-to-square"></i><% end %>
                       <%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %>
+                      <%= button_to group_path(group), class: "link-with-icon", method: :delete do %><i class="fas fa-trash-alt"></i><% end %>
                     </div>
                   </div>
                 </div>

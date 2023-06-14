@@ -28,7 +28,6 @@ a {
   -ms-transition: all 0.7s ease-in-out;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
 }
 
 .card.active {
@@ -36,7 +35,7 @@ a {
 }
 
 .banner {
-  z-index:1;
+  z-index: 1;
   position: relative;
   margin-top: -154px;
   width: 100%;
@@ -49,7 +48,6 @@ a {
 
 .banner.active {
   height: 0;
-
 }
 
 .photo {
@@ -135,17 +133,16 @@ button.contact:focus {
 }
 
 .personal {
- background-color:#afb3af;
- height: 150px;
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- font-size: 40px;
-
+  background-color: #afb3af;
+  height: 150px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 40px;
 }
 
 .social-media-banner {
   margin-top: 30px;
   margin-left: 40px;
-
 }
 
 .social-media-banner a i {
@@ -171,4 +168,18 @@ button.contact:focus {
   text-transform: uppercase;
   text-align: center;
   /*    color: black;*/
+}
+
+.link-with-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-with-icon i {
+  margin-right: 5px;
 }
