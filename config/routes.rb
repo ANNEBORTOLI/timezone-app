@@ -12,6 +12,4 @@ Rails.application.routes.draw do
   resources :groups do
     resources :messages, only: :create
   end
-
-  # get 'test', to: 'pages#test'
 end
