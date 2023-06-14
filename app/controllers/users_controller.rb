@@ -7,6 +7,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @contact = User.find(params[:id])
+    # Adjust offset only for contact timezone
+    user_offset = current_user.offset - @contact.offset
+    @contact.working_hour_start = adjust_to_24_hours(@contact.working_hour_start + user_offset)
+    @contact.working_hour_end = adjust_to_24_hours(@contact.working_hour_end + user_offset)
+
+    # Adjust offset for all conections
     @connections = Connection.where(user: current_user)
     @groups = Group.where(user: current_user)
     @availabilities = [current_user]

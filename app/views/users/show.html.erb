@@ -7,21 +7,20 @@
       <div class="personal justify-center">
           <ul>
             <li><strong><%= "#{@contact.first_name} #{@contact.last_name}" %></strong></li>
-            <li><%= @contact.address %></li>
-            <li>
-            <%= @contact.working_hour_start %>:00 |
-            <%= @contact.working_hour_end %>:00
+            <li> <strong>Email:</strong> <%= @contact.email%></li>
+            <li><strong>Timezone:</strong> <%= @contact.timezone %></li>
+            <li style="color: #fff;">-</li>
+            <li>Available hours in <span><%= current_user.timezone %></span>:</li>
+            <li style="color: #fff; background: #DC3545">
+              <%= @contact.working_hour_start %>:00 | <%= @contact.working_hour_end %>:00
             </li>
           </ul>
       </div>
-      <button class="contact" id="main-button">click to get in touch</button>
-
-
     <div class="social-media-banner justify-center">
-      <a href=""><i class="fa-brands fa-square-twitter"></i></a>
-      <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-      <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://twitter.com/"  target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+      <a href="https://pt-br.facebook.com/"  target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://www.instagram.com/"  target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="https://www.linkedin.com/"  target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     </div>
   </div>
 </div>
