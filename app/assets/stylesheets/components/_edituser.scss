@@ -53,7 +53,6 @@
 }
 
 .edit-cointainer {
-  /* From https://css.glass */
   width: 750px;
   height: 500px;
   background: rgba(238, 232, 232, 0.458);
@@ -64,6 +63,19 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 70px;
   margin-left: 55px;
+}
+
+.edit-cointainer-edit {
+  width: 780px;
+  height: 450px;
+  background: rgba(238, 232, 232, 0.458);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 70px;
+  margin-left: 40px;
 }
 
 .edit-cointainer2 {
