@@ -10,7 +10,11 @@
                 <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne<%= group.id %>" aria-expanded="false" aria-controls="collapseOne<%= group.id %>">
                   <div class="d-flex justify-content-between">
                     <div><%= group.title %> <i class="fa-solid fa-crown" style="color: #c7a423;"></i></div>
-                    <div><%= link_to edit_group_path(group), class: "link-with-icon mx-2" do %><i class="fa-regular fa-pen-to-square"></i><% end %><%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %></div>
+                    <div>
+                      <%= link_to edit_group_path(group), class: "link-with-icon mx-2" do %><i class="fa-regular fa-pen-to-square"></i><% end %>
+                      <%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %>
+                      <%= button_to group_path(group), class: "link-with-icon", method: :delete do %><i class="fas fa-trash-alt"></i><% end %>
+                    </div>
                   </div>
                 </div>
             </h6>
@@ -58,6 +62,21 @@
                 <div id="collapseOne<%= group.id %>" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
                   <div class="accordion-body">
                     <ul class="list-group list-group-light mb-5">
+                    <%# SHOW USER OWNER %>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt="" style="width: 45px; height: 45px" />
+                            <% user = User.find(group.user_id)  %>
+                          <div class="ms-3">
+                            <p class="fw-bold mb-1">
+                              <%= "#{user.first_name} #{user.last_name}" %>
+                            </p>
+                            <p class="text-muted mb-0">
+                              <%= user.email %>
+                            </p>
+                            </div>
+                          </div>
+                      </li>
                       <% group.contact_ids.each do |member| %>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center">
@@ -107,20 +126,20 @@
 </div>
 
 <script>
-function searchFriends() {
-  var input = document.getElementById("searchBar");
-  var filter = input.value.toUpperCase();
-  var friends = document.getElementsByClassName("friend");
+  function searchFriends() {
+    var input = document.getElementById("searchBar");
+    var filter = input.value.toUpperCase();
+    var friends = document.getElementsByClassName("friend");
 
-  for (var i = 0; i < friends.length; i++) {
-    var friend = friends[i];
-    var name = friend.getElementsByTagName("strong")[0].innerText.toUpperCase();
+    for (var i = 0; i < friends.length; i++) {
+      var friend = friends[i];
+      var name = friend.getElementsByTagName("strong")[0].innerText.toUpperCase();
 
-    if (name.includes(filter)) {
-      friend.style.display = "";
-    } else {
-      friend.style.display = "none";
+      if (name.includes(filter)) {
+        friend.style.display = "";
+      } else {
+        friend.style.display = "none";
+      }
     }
   }
-}
 </script>
