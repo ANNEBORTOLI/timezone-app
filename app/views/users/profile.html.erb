@@ -104,7 +104,8 @@
   <div id="chatbox">
     <div id="friendslist">
       <div id="topmenu">
-          <span class="friends"></span>
+        <span class="friends"></span>
+        <input type="text" id="searchBar" onkeyup="searchFriends()" placeholder="Search contacts...">
       </div>
 
       <% @connections.each do |connection|  %>
@@ -123,3 +124,22 @@
     </div>
   </div>
 </div>
+
+<script>
+  function searchFriends() {
+    var input = document.getElementById("searchBar");
+    var filter = input.value.toUpperCase();
+    var friends = document.getElementsByClassName("friend");
+
+    for (var i = 0; i < friends.length; i++) {
+      var friend = friends[i];
+      var name = friend.getElementsByTagName("strong")[0].innerText.toUpperCase();
+
+      if (name.includes(filter)) {
+        friend.style.display = "";
+      } else {
+        friend.style.display = "none";
+      }
+    }
+  }
+</script>
