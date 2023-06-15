@@ -1,73 +1,72 @@
-<div class="d-flex mt-2 ">
-  <%# CHAT %>
-  <div class="container chatroom chat-container"
-      data-controller="chatroom-subscription"
-      data-chatroom-subscription-chatroom-id-value="<%= @group.id %>"
-      data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-      <h1>#<%= @group.title %></h1>
+<div style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1636955816868-fcb881e57954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);">
 
-    <div class="messages" data-chatroom-subscription-target="messages">
-      <% @group.messages.each do |message| %>
-        <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-          <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-            <%= render "messages/message", message: message %>
+  <div class="d-flex mt-2 ">
+    <%# CHAT %>
+    <div class="container chatroom chat-container"
+        data-controller="chatroom-subscription"
+        data-chatroom-subscription-chatroom-id-value="<%= @group.id %>"
+        data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+        <h2 style="text-align: center;" class="mt-2">Chat <%= @group.title %></h2>
+        <hr>
+
+      <div class="messages" data-chatroom-subscription-target="messages">
+        <% @group.messages.each do |message| %>
+          <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+            <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+              <%= render "messages/message", message: message %>
+            </div>
           </div>
-        </div>
+        <% end %>
+      </div>
+        <%# INPUT TO SEND MSG %>
+      <%= simple_form_for [@group, @message], html: {data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex"} do |f| %>
+      <%= f.input :content,
+        label: false,
+        wrapper_html: {class: "flex-grow-1"} %>
+      <%= f.submit "Send", class: "btn btn-primary-chat" %>
       <% end %>
     </div>
-      <%# INPUT TO SEND MSG %>
-    <%= simple_form_for [@group, @message], html: {data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex"} do |f| %>
-    <%= f.input :content,
-      label: false,
-      placeholder: "Message ##{@group.title}",
-      wrapper_html: {class: "flex-grow-1"} %>
-    <%= f.submit "Send", class: "btn btn-primary-chat" %>
-    <% end %>
-  </div>
 
-
-  <table class="members-table">
-    <tr>
-      <th>Members</th>
-      <% (0..23).each do |hour|%>
-        <th><%= hour %>:00</th>
-      <% end %>
-    </tr>
-    <% @availabilities.each do |user| %>
-    <% if user.working_hour_start != nil && user.working_hour_end != nil %>
+    <table class="members-table">
       <tr>
-        <td colspan="25"></td>
+        <th>Members</th>
+        <% (0..23).each do |hour|%>
+          <th><%= hour %>:00</th>
+        <% end %>
       </tr>
-      <% if user.working_hour_start < user.working_hour_end %>
+      <% @availabilities.each do |user| %>
+      <% if user.working_hour_start != nil && user.working_hour_end != nil %>
         <tr>
-          <td><%="#{user.first_name} #{user.last_name}"%></td>
-          <% (0..user.working_hour_start-1).each do |hour| %>
-            <td>--</td>
-          <% end %>
-          <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
-            <td class="available"></td>
-          <% end %>
-          <% (user.working_hour_end..23).each do |hour| %>
-            <td>--</td>
-          <% end %>
+          <td colspan="25"></td>
         </tr>
-        <% else %>
-        <tr>
-          <td><%="#{user.first_name} #{user.last_name}"%></td>
-          <% (0..user.working_hour_end-1).each do |hour| %>
-            <td class="available"></td>
+        <% if user.working_hour_start < user.working_hour_end %>
+          <tr>
+            <td><%="#{user.first_name} #{user.last_name}"%></td>
+            <% (0..user.working_hour_start-1).each do |hour| %>
+              <td>--</td>
+            <% end %>
+            <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
+              <td class="available"></td>
+            <% end %>
+            <% (user.working_hour_end..23).each do |hour| %>
+              <td>--</td>
+            <% end %>
+          </tr>
+          <% else %>
+          <tr>
+            <td><%="#{user.first_name} #{user.last_name}"%></td>
+            <% (0..user.working_hour_end-1).each do |hour| %>
+              <td class="available"></td>
+            <% end %>
+            <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
+              <td>--</td>
+            <% end %>
+            <% (user.working_hour_start..23).each do |hour| %>
+              <td class="available"></td>
+            <% end %>
+          </tr>
           <% end %>
-          <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
-            <td>--</td>
-          <% end %>
-          <% (user.working_hour_start..23).each do |hour| %>
-            <td class="available"></td>
-          <% end %>
-        </tr>
         <% end %>
       <% end %>
-    <% end %>
-  </table>
+    </table>
 </div>
-
-<div class="modal-dialog modal-xl">...</div>

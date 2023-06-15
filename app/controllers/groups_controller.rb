@@ -53,7 +53,7 @@ class GroupsController < ApplicationController
     new_ids = array.map { |element| element.to_i unless element == "" }.compact
 
     if @group.update(group_params.merge(contact_ids: new_ids))
-      redirect_to @group, notice: 'Group was successfully updated.'
+      redirect_to url_from(@group) || root_url, notice: "Group was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end

@@ -13,7 +13,6 @@
                     <div class="threeicons">
                       <%= link_to edit_group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-pen-to-square"></i><% end %>
                       <%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %>
-
                     </div>
                   </div>
                 </div>
@@ -50,10 +49,10 @@
             <div class="accordion-item">
                 <h6 class="accordion-header bg-light p-2 border-top border-bottom">
                   <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne<%= group.id %>" aria-expanded="false" aria-controls="collapseOne<%= group.id %>">
-                    <div class="d-flex justify-content-between">
+                    <div class="lista d-flex justify-content-between px-2">
                       <%= group.title %>
                       <div>
-                        <a href="<%= group_path(group) %>"> <i class="fa-regular fa-comment"></i></a>
+                        <%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %>
                       </div>
                     </div>
                   </div>
@@ -64,23 +63,25 @@
                     <%# SHOW USER OWNER %>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                          <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt="" style="width: 45px; height: 45px" />
-                            <% user = User.find(group.user_id)  %>
-                          <div class="ms-3">
-                            <p class="fw-bold mb-1">
-                              <%= "#{user.first_name} #{user.last_name}" %>
-                            </p>
-                            <p class="text-muted mb-0">
-                              <%= user.email %>
-                            </p>
+                          <% user = User.find(group.user_id)  %>
+                          <%= image_tag "#{user.image}", class: "avatar", alt: "profile photo" %>
+                          <%# <img src="#{user.image}" class="rounded-circle" alt="" style="width: 45px; height: 45px" /> %>
+                            <div class="ms-3">
+                              <p class="fw-bold mb-1">
+                                <%= "#{user.first_name} #{user.last_name}" %>
+                              </p>
+                              <p class="text-muted mb-0">
+                                <%= user.email %>
+                              </p>
+                              </div>
                             </div>
-                          </div>
-                      </li>
+                        </li>
                       <% group.contact_ids.each do |member| %>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                           <div class="d-flex align-items-center">
-                            <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt="" style="width: 45px; height: 45px" />
                             <% user = User.find(member)  %>
+                            <%= image_tag "#{user.image}", class: "avatar", alt: "profile photo" %>
+                            <%# <img src=user.image class="rounded-circle" alt="" style="width: 45px; height: 45px" /> %>
                             <div class="ms-3">
                               <p class="fw-bold mb-1">
                                 <%= "#{user.first_name} #{user.last_name}" %>

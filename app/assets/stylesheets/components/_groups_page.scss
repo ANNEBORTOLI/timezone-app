@@ -9,24 +9,22 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 6px;
-  -webkit-box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -webkit-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  -moz-box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -moz-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  }
+}
 .my-groups {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: #fffbf8;
   width: 100%;
   height: 80px;
@@ -34,22 +32,19 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 6px;
-  -webkit-box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -webkit-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  -moz-box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -moz-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  }
+}
 
 .groupone {
   border-radius: 10px;
@@ -58,15 +53,10 @@
 }
 
 body {
-  font: 12px 'Trebuchet MS',
-    'Lucida Sans Unicode',
-    'Lucida Grande',
-    'Lucida Sans',
-    Arial,
-    sans-serif;
-   background-color: #fffbf8;
-   font-weight:bolder;
-
+  font: 12px "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #fffbf8;
+  font-weight: bolder;
 }
 
 #view-code {
@@ -86,15 +76,15 @@ body {
   opacity: 1;
 }
 #chatbox {
-  width: 66%;
-  background: #F2F0E9;
+  width: 65%;
+  background: #f2f0e9;
   border-radius: 6px;
   overflow: hidden;
   height: 98%;
   position: absolute;
   top: 80px;
   left: 30%;
-  float:right;
+  float: right;
 }
 
 #friendslist {
@@ -114,7 +104,6 @@ body {
   height: 71px;
   border-bottom: 1px solid #e7ebee;
   position: relative;
-
 }
 .friend:hover {
   background: #f1f4f6;
@@ -150,12 +139,11 @@ body {
   color: #aab8c2;
 }
 
-
 #profile {
   height: 153px;
   overflow: hidden;
   text-align: center;
-  color:#fffbf8;
+  color: #fffbf8;
 }
 .p1 #profile {
   background: #fffbf8
@@ -224,24 +212,21 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 6px;
-  -webkit-box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -webkit-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  -moz-box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -moz-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  box-shadow:
-    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
     0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
 }
 
-#searchBar{
+#searchBar {
   margin-top: 5px;
 }
 input[type="search"] {
@@ -253,28 +238,17 @@ input[type="search"] {
   border: none;
   color: #939393;
   font-weight: 500;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: #fffbf8;
-  -webkit-box-shadow:
-    0 -2px 2px 0 rgba(199, 199, 199, 0.55),
-    0 1px 1px 0 #fff,
-    0 2px 2px 1px #fafafa,
-    0 2px 4px 0 #b2b2b2 inset,
-    0 -1px 1px 0 #f2f2f2 inset,
+  -webkit-box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff,
+    0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset,
     0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
-  -moz-box-shadow:
-    0 -2px 2px 0 rgba(199, 199, 199, 0.55),
-    0 1px 1px 0 #fff,
-    0 2px 2px 1px #fafafa,
-    0 2px 4px 0 #b2b2b2 inset,
-    0 -1px 1px 0 #f2f2f2 inset,
+  -moz-box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff,
+    0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset,
     0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
-  box-shadow:
-    0 -2px 2px 0 rgba(199, 199, 199, 0.55),
-    0 1px 1px 0 #fff,
-    0 2px 2px 1px #fafafa,
-    0 2px 4px 0 #b2b2b2 inset,
-    0 -1px 1px 0 #f2f2f2 inset,
+  box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff,
+    0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset,
     0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
 }
 
@@ -294,7 +268,7 @@ button[type="submit"] {
 input[type="search"]:focus {
   outline: 0;
 }
-.minicons{
+.minicons {
   display: flex;
   justify-content: space-between;
   margin-left: 430px;
@@ -304,14 +278,15 @@ input[type="search"]:focus {
 
 .contactshow2 {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-left: 120px;
   margin-right: 2px;
   margin-top: 5px;
 }
 
 .lista {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   color: #597a96;
   font-weight: 600;
@@ -326,8 +301,8 @@ input[type="search"]:focus {
 }
 
 .link-with-icon i {
-    margin-right: 3px;
-    color: #394867;
+  margin-right: 3px;
+  color: #394867;
 }
 .list-group-item {
   width: 100%;

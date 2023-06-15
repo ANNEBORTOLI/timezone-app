@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# Cors
+gem 'rack-cors'
+
 # Cloudinary
 gem "cloudinary"
 
