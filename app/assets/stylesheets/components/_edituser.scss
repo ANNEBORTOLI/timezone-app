@@ -36,26 +36,29 @@
 
 .titleedit {
   text-align:left;
-  font-size: 40px;
-  color:#5522fa;
-  margin-top: 50px;
+  font-size: 35px;
+  color:#515151;
+  margin-top: 30px;
   margin-left: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 120px;
+
 }
 
 #formedit {
-  color:#5522fa;
+  color:#515151;
   font-size: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 700px;
   height: 300px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 35px;
 }
 
 .edit-cointainer {
   width: 750px;
   height: 500px;
-  background: rgba(238, 232, 232, 0.458);
+  background: rgba(238, 232, 232, 0.266);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);

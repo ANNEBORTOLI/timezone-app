@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "users#profile"
+  get "/about", to: "pages#about"
 
   resources :users, only: %i[index edit update show] do
     collection do

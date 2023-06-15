@@ -1,7 +1,9 @@
-table,
-th,
-td {
-  border: 1px solid rgb(229, 217, 217);
+table {
+  background-color: #f2f0e9;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-top: double;
+  border-bottom: double;
 }
 
 .available {
@@ -19,13 +21,3 @@ td {
   min-height: 300px;
   text-align: center;
 }
-
-// .hour {
-//   width: 10px;
-// }
-
-// .members-table tr {
-//   height: 10px;
-// }
-
-// <strong><%= current_user.timezone.upcase %></strong>

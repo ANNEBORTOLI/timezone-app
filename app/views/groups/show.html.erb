@@ -45,23 +45,23 @@
             <td>--</td>
           <% end %>
           <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
-            <td class="available">--</td>
+            <td class="available"></td>
           <% end %>
           <% (user.working_hour_end..23).each do |hour| %>
-            <td>-</td>
+            <td>--</td>
           <% end %>
         </tr>
         <% else %>
         <tr>
           <td><%="#{user.first_name} #{user.last_name}"%></td>
           <% (0..user.working_hour_end-1).each do |hour| %>
-            <td class="available">--</td>
+            <td class="available"></td>
           <% end %>
           <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
             <td>--</td>
           <% end %>
           <% (user.working_hour_start..23).each do |hour| %>
-            <td class="available">--</td>
+            <td class="available"></td>
           <% end %>
         </tr>
         <% end %>
