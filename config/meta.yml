@@ -1,5 +1,5 @@
 meta_name: "TimeZone App"
 meta_title: "TimeZone App - Sync, Chat, and Collaborate: Connect Seamlessly Across Timezones!"
-meta_description: Discover a new level of time zone management with TimezoneApp, the must-have app for anyone navigating the global landscape 🌏
+meta_description: "Discover a new level of time zone management with TimezoneApp, the must-have app for anyone navigating the global landscape 🌏
 Say Goodbye to time zone confusion and Hello to effortless coordination"
-meta_image: "logo.jpg" # should exist in `app/assets/images/`
+meta_image: "logo.png" # should exist in `app/assets/images/`
