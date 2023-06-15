@@ -1,0 +1,199 @@
+.globalabout {
+-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display:inline-flex;
+  background-color: #fffbf8;
+
+
+}
+
+@keyframes moveTimeZones {
+  from {
+    left: 0
+  }
+
+  to {
+    left: -1000px;
+  }
+}
+
+#clock {
+  width: 1000px;
+  height: 630px;
+  position: relative;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  margin: auto auto;
+}
+
+#clock svg {
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+}
+
+#lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2000px;
+  z-index: 2;
+  animation: moveTimeZones linear 86400s infinite;
+}
+
+#lines>div {
+  box-sizing: border-box;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: calc(1000px / 24);
+  float: left;
+  line-height: 30px;
+  font-size: 0.65em;
+  font-family: verdana, arial, sans-serif;
+  text-align: center;
+}
+
+#lines>div:nth-of-type(2n) {
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#lines>div:nth-of-type(12n) {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.textabout {
+
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+
+
+  padding-top: 120px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.columntwo {
+
+
+  font-size: 15px;
+  text-align: justify;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  align-self: flex-end;
+  height: 45vh;
+  display: inline-block;
+  width: 80%;
+
+  backdrop-filter: blur(5px);
+  margin-left: 50px;
+  padding: 10px;
+
+}
+
+.columnone {
+  display: inline-block;
+  padding: 10px;
+  padding-left: 20px;
+  width:80%;
+
+  height: 45vh;
+  font-size: 15px;
+  margin-left: 40px;
+  text-align: justify;
+  position: relative;
+
+
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+
+}
+
+.titleabout {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+  text-shadow: 0 1px 0 #ccc,
+      0 2px 0 #c9c9c9,
+      0 3px 0 #bbb,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(0, 0, 0, .1),
+      0 0 5px rgba(0, 0, 0, .1),
+      0 1px 3px rgba(0, 0, 0, .3),
+      0 3px 5px rgba(0, 0, 0, .2),
+      0 5px 10px rgba(0, 0, 0, .25),
+      0 10px 10px rgba(0, 0, 0, .2),
+      0 20px 20px rgba(0, 0, 0, .15);
+    color: #FFF;
+
+}
+
+.titleaboutdos {
+  width: 80%;
+  text-align: center;
+  margin: 15px 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-shadow:
+      0 1px 0 white,
+      0 2px 0 #f6f0f0,
+      0 3px 0 #f7f7f7,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(47, 47, 47, 0.1),
+      0 0 5px rgba(68, 68, 68, 0.1),
+      0 1px 3px rgba(68, 68, 68, 0.3),
+      0 3px 5px rgba(68, 68, 68, 0.2),
+      0 5px 10px rgba(68, 68, 68, 0.25),
+      0 10px 10px rgba(68, 68, 68, 0.2),
+      0 20px 20px rgba(68, 68, 68, 0.15);
+  filter: brightness(150%);
+
+
+}
+
+.main{
+  display: flex;
+}
