@@ -1,31 +1,72 @@
 .groups {
-  height: 900px;
+  height: 600px;
   width: 42%;
-  margin-left: 10px;
+  margin-left: 17px;
   color: #515151;
-  margin-top: 5px;
-
-
-}
-.groupone{
+  margin-top: 15px;
   background-color: #fffbf8;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-.my-groups{
-  height: 60px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 6px;
+  -webkit-box-shadow:
+    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  -moz-box-shadow:
+    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  box-shadow:
+    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  }
+.my-groups {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #fffbf8;
+  width: 100%;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 6px;
+  -webkit-box-shadow:
+    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  -moz-box-shadow:
+    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  box-shadow:
+    0 2px 4px 0 rgba(72, 72, 72, 0.83),
+    0 10px 15px 0 rgba(126, 126, 126, 0.12),
+    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
+  }
+
+.groupone {
+  border-radius: 10px;
+  background-color: #fffbf8;
+  width: 100%;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
 body {
-  // background: #f0f1f2;
-  font: 12px "Open Sans", sans-serif;
-  background-color: #fffbf8;
+  font: 12px 'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+   background-color: #fffbf8;
+   font-weight:bolder;
+
 }
 
 #view-code {
@@ -45,11 +86,11 @@ body {
   opacity: 1;
 }
 #chatbox {
-  width: 69%;
-  background: #fffbf8;
+  width: 68%;
+  background: #F2F0E9;
   border-radius: 6px;
   overflow: hidden;
-  height: 484px;
+  height: 98%;
   position: absolute;
   top: 80px;
   left: 30%;
@@ -60,30 +101,20 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 900px;
+  width: 980px;
   height: 484px;
 }
 #topmenu {
   height: 69px;
-  width: 70%;
+  width: 100%;
   border-bottom: 1px solid #d8dfe3;
 }
-#topmenu span {
-  float: left;
-  width: 96px;
-  height: 70px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/top-menu.png") -3px -118px
-    no-repeat;
-}
-#topmenu span.friends {
-  margin-bottom: -1px;
-}
-
 
 .friend {
-  height: 70px;
+  height: 71px;
   border-bottom: 1px solid #e7ebee;
   position: relative;
+
 }
 .friend:hover {
   background: #f1f4f6;
@@ -110,29 +141,15 @@ body {
 }
 .friend p strong {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   color: #597a96;
 }
 .friend p span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: #aab8c2;
 }
-.friend .status {
-  background: #26c281;
-  border-radius: 50%;
-  width: 9px;
-  height: 9px;
-  position: absolute;
-  top: 31px;
-  right: 17px;
-}
-.friend .status.away {
-  background: #ffce54;
-}
-.friend .status.inactive {
-  background: hsl(0, 97%, 45%);
-}
+
 
 #profile {
   height: 153px;
@@ -186,15 +203,9 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.group {
-  padding-left: 20px;
-  background-color: #fffbf8;
-}
-
-
 #gradient {
   width: 0;
-  height: 45px;
+  height: 50px;
   margin: 0 auto;
   border-radius: 100%;
   -webkit-box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
@@ -204,9 +215,11 @@ body {
 
 .searchbox {
   background-color: #fffbf8;
-  padding: 8px;
-  width: 430px;
-  margin: -35px auto;
+  padding: 10px;
+  width: 100%;
+  height: 63px;
+  margin-top: -48px;
+  float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -228,14 +241,19 @@ body {
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
 }
 
+#searchBar{
+  margin-top: 5px;
+}
 input[type="search"] {
-  width: 370px;
-  height: 30px;
+  width: 300px;
+  height: 35px;
+  margin-top: -12px;
   padding-left: 15px;
   border-radius: 6px;
   border: none;
   color: #939393;
   font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #fffbf8;
   -webkit-box-shadow:
     0 -2px 2px 0 rgba(199, 199, 199, 0.55),
@@ -275,4 +293,44 @@ button[type="submit"] {
 
 input[type="search"]:focus {
   outline: 0;
+}
+.minicons{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 430px;
+  margin-right: 90px;
+  margin-top: -35px;
+}
+
+.contactshow2 {
+  display: flex;
+  justify-content:center;
+  margin-left: 120px;
+  margin-right: 2px;
+  margin-top: 5px;
+}
+
+.lista {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: #597a96;
+  font-weight: 600;
+  background-color: #fffbf8;
+}
+.lista:hover {
+  background: #f1f4f6;
+  cursor: pointer;
+}
+.threeicons {
+  display: flex;
+}
+
+.link-with-icon i {
+    margin-right: 3px;
+    color: #394867;
+}
+.list-group-item {
+  width: 100%;
+  font-size: 15px;
+  color: #394867;
 }

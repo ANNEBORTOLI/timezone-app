@@ -2,18 +2,18 @@
   <div class="groups">
     <div class="groupone">
       <div class="accordion" id="accordionExample">
-        <h4 class="my-groups bg-light p-4 my-2 d-flex justify-content-center fw-bold">My Groups</h4>
+        <h4 class="my-groups bg-light py-4 d-flex justify-content-center fw-bold">My Groups &nbsp;<%= image_tag "team.png" %></h4>
 
           <% @groups.each do |group| %>
             <div class="accordion-item">
               <h6 class="accordion-header bg-light p-2 border-top border-bottom">
                 <div class="accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne<%= group.id %>" aria-expanded="false" aria-controls="collapseOne<%= group.id %>">
-                  <div class="d-flex justify-content-between">
+                  <div class="lista d-flex justify-content-between px-2">
                     <div><%= group.title %> <i class="fa-solid fa-crown" style="color: #c7a423;"></i></div>
-                    <div>
-                      <%= link_to edit_group_path(group), class: "link-with-icon mx-2" do %><i class="fa-regular fa-pen-to-square"></i><% end %>
+                    <div class="threeicons">
+                      <%= link_to edit_group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-pen-to-square"></i><% end %>
                       <%= link_to group_path(group), class: "link-with-icon" do %><i class="fa-regular fa-comment"></i><% end %>
-                      <%= button_to group_path(group), class: "link-with-icon", method: :delete do %><i class="fas fa-trash-alt"></i><% end %>
+
                     </div>
                   </div>
                 </div>
@@ -103,11 +103,14 @@
   <div id="chatbox">
     <div id="friendslist">
       <div id="topmenu">
-        <span class="friends"></span>
           <div id="gradient"></div>
             <div class="searchbox">
                 <input type="search" id="searchBar" onkeyup="searchFriends()" placeholder="Search contacts...">
-                <button type="submit" value="search">&nbsp;</button>
+                  <button type="submit" value="search">&nbsp;</button>
+                  <div class="minicons">
+                    <%= image_tag "utc.png" %>
+                    <%= image_tag "placeholderr.png" %>
+                  </div>
             </div>
       </div>
       <% @connections.each do |connection|  %>
@@ -115,17 +118,18 @@
           <a href="<%= user_path(connection.contact) %>">
           <%= image_tag "#{connection.contact.image}", class: "avatar", alt: "dropdown menu" %>
           <p class="contactshow d-flex justify-content-between">
-            <strong><%= "#{connection.contact.first_name} #{connection.contact.last_name}" %></strong>
-              <p class="contactshow d-flex justify-content-between">
-                <%= connection.contact.working_hour_start%>:00 | <%= connection.contact.working_hour_end%>:00
+            <strong><%= "#{connection.contact.first_name} #{connection.contact.last_name}" %></strong></p>
+              <p class="contactshow2 d-flex justify-content-between">
+                <span class="badge badge-info" style="background-color: #6C757D; border-radius: 30px; color: #fff; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;"> <%= connection.contact.working_hour_start%>:00 | <%= connection.contact.working_hour_end%>:00</span>
               </p>
-          </p>
-          <div class="status available"></div>
+            <p class="contactshow2">
+              <span class="badge badge-info" style="background-color: #17A2B8; border-radius: 30px; color: #fff; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+              <%= connection.contact.timezone%>
+              </span>
+            </p>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
 
 <script>
   function searchFriends() {
