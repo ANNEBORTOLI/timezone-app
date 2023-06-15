@@ -94,7 +94,7 @@ User.create!(
 
 User.create!(
   first_name: "Leonardo",
-  last_name: "Gomes",
+  last_name: "Alves",
   email: "leonardo@lewagon.com",
   password: "123456",
   phone: "21-96589-2368",
@@ -255,9 +255,837 @@ nema = User.find(15)
 viktor = User.find(16)
 dani = User.find(17)
 douglas = User.find(18)
+
 julia = User.find(19)
 
 puts "Creating connections..."
+
+# julia Contacts
+Connection.create!(
+  user: julia,
+  contact: anne
+)
+
+Connection.create!(
+  user: julia,
+  contact: ara
+)
+
+Connection.create!(
+  user: julia,
+  contact: augusto
+)
+
+Connection.create!(
+  user: julia,
+  contact: bruno
+)
+
+Connection.create!(
+  user: julia,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: julia,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: julia,
+  contact: ariel
+)
+
+Connection.create!(
+  user: julia,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: julia,
+  contact: marcos
+)
+
+Connection.create!(
+  user: julia,
+  contact: carla
+)
+
+Connection.create!(
+  user: julia,
+  contact: antonio
+)
+
+Connection.create!(
+  user: julia,
+  contact: chloe
+)
+
+Connection.create!(
+  user: julia,
+  contact: andre
+)
+
+Connection.create!(
+  user: julia,
+  contact: yuri
+)
+
+Connection.create!(
+  user: julia,
+  contact: nema
+)
+
+Connection.create!(
+  user: julia,
+  contact: viktor
+)
+
+Connection.create!(
+  user: julia,
+  contact: dani
+)
+
+Connection.create!(
+  user: julia,
+  contact: douglas
+)
+
+
+# douglas Contacts
+Connection.create!(
+  user: douglas,
+  contact: anne
+)
+
+Connection.create!(
+  user: douglas,
+  contact: ara
+)
+
+Connection.create!(
+  user: douglas,
+  contact: augusto
+)
+
+Connection.create!(
+  user: douglas,
+  contact: bruno
+)
+
+Connection.create!(
+  user: douglas,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: douglas,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: douglas,
+  contact: ariel
+)
+
+Connection.create!(
+  user: douglas,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: douglas,
+  contact: marcos
+)
+
+Connection.create!(
+  user: douglas,
+  contact: carla
+)
+
+Connection.create!(
+  user: douglas,
+  contact: antonio
+)
+
+Connection.create!(
+  user: douglas,
+  contact: chloe
+)
+
+Connection.create!(
+  user: douglas,
+  contact: andre
+)
+
+Connection.create!(
+  user: douglas,
+  contact: yuri
+)
+
+Connection.create!(
+  user: douglas,
+  contact: nema
+)
+
+Connection.create!(
+  user: douglas,
+  contact: viktor
+)
+
+Connection.create!(
+  user: douglas,
+  contact: dani
+)
+
+Connection.create!(
+  user: douglas,
+  contact: julia
+)
+
+
+# dani Contacts
+Connection.create!(
+  user: dani,
+  contact: anne
+)
+
+Connection.create!(
+  user: dani,
+  contact: ara
+)
+
+Connection.create!(
+  user: dani,
+  contact: augusto
+)
+
+Connection.create!(
+  user: dani,
+  contact: bruno
+)
+
+Connection.create!(
+  user: dani,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: dani,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: dani,
+  contact: ariel
+)
+
+Connection.create!(
+  user: dani,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: dani,
+  contact: marcos
+)
+
+Connection.create!(
+  user: dani,
+  contact: carla
+)
+
+Connection.create!(
+  user: dani,
+  contact: antonio
+)
+
+Connection.create!(
+  user: dani,
+  contact: chloe
+)
+
+Connection.create!(
+  user: dani,
+  contact: andre
+)
+
+Connection.create!(
+  user: dani,
+  contact: yuri
+)
+
+Connection.create!(
+  user: dani,
+  contact: nema
+)
+
+Connection.create!(
+  user: dani,
+  contact: viktor
+)
+
+Connection.create!(
+  user: dani,
+  contact: douglas
+)
+
+Connection.create!(
+  user: dani,
+  contact: julia
+)
+
+
+# viktor Contacts
+Connection.create!(
+  user: viktor,
+  contact: anne
+)
+
+Connection.create!(
+  user: viktor,
+  contact: ara
+)
+
+Connection.create!(
+  user: viktor,
+  contact: augusto
+)
+
+Connection.create!(
+  user: viktor,
+  contact: bruno
+)
+
+Connection.create!(
+  user: viktor,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: viktor,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: viktor,
+  contact: ariel
+)
+
+Connection.create!(
+  user: viktor,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: viktor,
+  contact: marcos
+)
+
+Connection.create!(
+  user: viktor,
+  contact: carla
+)
+
+Connection.create!(
+  user: viktor,
+  contact: antonio
+)
+
+Connection.create!(
+  user: viktor,
+  contact: chloe
+)
+
+Connection.create!(
+  user: viktor,
+  contact: andre
+)
+
+Connection.create!(
+  user: viktor,
+  contact: yuri
+)
+
+Connection.create!(
+  user: viktor,
+  contact: nema
+)
+
+Connection.create!(
+  user: viktor,
+  contact: dani
+)
+
+Connection.create!(
+  user: viktor,
+  contact: douglas
+)
+
+Connection.create!(
+  user: viktor,
+  contact: julia
+)
+
+
+# nema Contacts
+Connection.create!(
+  user: nema,
+  contact: anne
+)
+
+Connection.create!(
+  user: nema,
+  contact: ara
+)
+
+Connection.create!(
+  user: nema,
+  contact: augusto
+)
+
+Connection.create!(
+  user: nema,
+  contact: bruno
+)
+
+Connection.create!(
+  user: nema,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: nema,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: nema,
+  contact: ariel
+)
+
+Connection.create!(
+  user: nema,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: nema,
+  contact: marcos
+)
+
+Connection.create!(
+  user: nema,
+  contact: carla
+)
+
+Connection.create!(
+  user: nema,
+  contact: antonio
+)
+
+Connection.create!(
+  user: nema,
+  contact: chloe
+)
+
+Connection.create!(
+  user: nema,
+  contact: andre
+)
+
+Connection.create!(
+  user: nema,
+  contact: yuri
+)
+
+Connection.create!(
+  user: nema,
+  contact: viktor
+)
+
+Connection.create!(
+  user: nema,
+  contact: dani
+)
+
+Connection.create!(
+  user: nema,
+  contact: douglas
+)
+
+Connection.create!(
+  user: nema,
+  contact: julia
+)
+
+
+# yuri Contacts
+Connection.create!(
+  user: yuri,
+  contact: anne
+)
+
+Connection.create!(
+  user: yuri,
+  contact: ara
+)
+
+Connection.create!(
+  user: yuri,
+  contact: augusto
+)
+
+Connection.create!(
+  user: yuri,
+  contact: bruno
+)
+
+Connection.create!(
+  user: yuri,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: yuri,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: yuri,
+  contact: ariel
+)
+
+Connection.create!(
+  user: yuri,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: yuri,
+  contact: marcos
+)
+
+Connection.create!(
+  user: yuri,
+  contact: carla
+)
+
+Connection.create!(
+  user: yuri,
+  contact: antonio
+)
+
+Connection.create!(
+  user: yuri,
+  contact: chloe
+)
+
+Connection.create!(
+  user: yuri,
+  contact: andre
+)
+
+Connection.create!(
+  user: yuri,
+  contact: nema
+)
+
+Connection.create!(
+  user: yuri,
+  contact: viktor
+)
+
+Connection.create!(
+  user: yuri,
+  contact: dani
+)
+
+Connection.create!(
+  user: yuri,
+  contact: douglas
+)
+
+Connection.create!(
+  user: yuri,
+  contact: julia
+)
+
+
+# andre Contacts
+Connection.create!(
+  user: andre,
+  contact: anne
+)
+
+Connection.create!(
+  user: andre,
+  contact: ara
+)
+
+Connection.create!(
+  user: andre,
+  contact: augusto
+)
+
+Connection.create!(
+  user: andre,
+  contact: bruno
+)
+
+Connection.create!(
+  user: andre,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: andre,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: andre,
+  contact: ariel
+)
+
+Connection.create!(
+  user: andre,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: andre,
+  contact: marcos
+)
+
+Connection.create!(
+  user: andre,
+  contact: carla
+)
+
+Connection.create!(
+  user: andre,
+  contact: antonio
+)
+
+Connection.create!(
+  user: andre,
+  contact: chloe
+)
+
+Connection.create!(
+  user: andre,
+  contact: yuri
+)
+
+Connection.create!(
+  user: andre,
+  contact: nema
+)
+
+Connection.create!(
+  user: andre,
+  contact: viktor
+)
+
+Connection.create!(
+  user: andre,
+  contact: dani
+)
+
+Connection.create!(
+  user: andre,
+  contact: douglas
+)
+
+Connection.create!(
+  user: andre,
+  contact: julia
+)
+
+
+# chloe Contacts
+Connection.create!(
+  user: chloe,
+  contact: anne
+)
+
+Connection.create!(
+  user: chloe,
+  contact: ara
+)
+
+Connection.create!(
+  user: chloe,
+  contact: augusto
+)
+
+Connection.create!(
+  user: chloe,
+  contact: bruno
+)
+
+Connection.create!(
+  user: chloe,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: chloe,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: chloe,
+  contact: ariel
+)
+
+Connection.create!(
+  user: chloe,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: chloe,
+  contact: marcos
+)
+
+Connection.create!(
+  user: chloe,
+  contact: carla
+)
+
+Connection.create!(
+  user: chloe,
+  contact: antonio
+)
+
+Connection.create!(
+  user: chloe,
+  contact: andre
+)
+
+Connection.create!(
+  user: chloe,
+  contact: yuri
+)
+
+Connection.create!(
+  user: chloe,
+  contact: nema
+)
+
+Connection.create!(
+  user: chloe,
+  contact: viktor
+)
+
+Connection.create!(
+  user: chloe,
+  contact: dani
+)
+
+Connection.create!(
+  user: chloe,
+  contact: douglas
+)
+
+Connection.create!(
+  user: chloe,
+  contact: julia
+)
+
+# antonio Contacts
+Connection.create!(
+  user: antonio,
+  contact: anne
+)
+
+Connection.create!(
+  user: antonio,
+  contact: ara
+)
+
+Connection.create!(
+  user: antonio,
+  contact: augusto
+)
+
+Connection.create!(
+  user: antonio,
+  contact: bruno
+)
+
+Connection.create!(
+  user: antonio,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: antonio,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: antonio,
+  contact: ariel
+)
+
+Connection.create!(
+  user: antonio,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: antonio,
+  contact: marcos
+)
+
+Connection.create!(
+  user: antonio,
+  contact: carla
+)
+
+Connection.create!(
+  user: antonio,
+  contact: chloe
+)
+
+Connection.create!(
+  user: antonio,
+  contact: andre
+)
+
+Connection.create!(
+  user: antonio,
+  contact: yuri
+)
+
+Connection.create!(
+  user: antonio,
+  contact: nema
+)
+
+Connection.create!(
+  user: antonio,
+  contact: viktor
+)
+
+Connection.create!(
+  user: antonio,
+  contact: dani
+)
+
+Connection.create!(
+  user: antonio,
+  contact: douglas
+)
+
+Connection.create!(
+  user: antonio,
+  contact: julia
+)
+
 
 # Bruno Contacts
 Connection.create!(
@@ -531,6 +1359,644 @@ Connection.create!(
   user: ara,
   contact: julia
 )
+
+# Augusto Contacts
+Connection.create!(
+  user: augusto,
+  contact: anne
+)
+
+Connection.create!(
+  user: augusto,
+  contact: ara
+)
+
+Connection.create!(
+  user: augusto,
+  contact: bruno
+)
+
+Connection.create!(
+  user: augusto,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: augusto,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: augusto,
+  contact: ariel
+)
+
+Connection.create!(
+  user: augusto,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: augusto,
+  contact: marcos
+)
+
+Connection.create!(
+  user: augusto,
+  contact: carla
+)
+
+Connection.create!(
+  user: augusto,
+  contact: antonio
+)
+
+Connection.create!(
+  user: augusto,
+  contact: chloe
+)
+
+Connection.create!(
+  user: augusto,
+  contact: andre
+)
+
+Connection.create!(
+  user: augusto,
+  contact: yuri
+)
+
+Connection.create!(
+  user: augusto,
+  contact: nema
+)
+
+Connection.create!(
+  user: augusto,
+  contact: viktor
+)
+
+Connection.create!(
+  user: augusto,
+  contact: dani
+)
+
+Connection.create!(
+  user: augusto,
+  contact: douglas
+)
+
+Connection.create!(
+  user: augusto,
+  contact: julia
+)
+
+# Pedrinho Contacts
+Connection.create!(
+  user: pedrinho,
+  contact: anne
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: ara
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: augusto
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: bruno
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: ariel
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: marcos
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: carla
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: antonio
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: chloe
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: andre
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: yuri
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: nema
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: viktor
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: dani
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: douglas
+)
+
+Connection.create!(
+  user: pedrinho,
+  contact: julia
+)
+
+# Pedrao Contacts
+Connection.create!(
+  user: pedrao,
+  contact: anne
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: ara
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: augusto
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: bruno
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: ariel
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: marcos
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: carla
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: antonio
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: chloe
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: andre
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: yuri
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: nema
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: viktor
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: dani
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: douglas
+)
+
+Connection.create!(
+  user: pedrao,
+  contact: julia
+)
+
+# Ariel Contacts
+Connection.create!(
+  user: ariel,
+  contact: anne
+)
+
+Connection.create!(
+  user: ariel,
+  contact: ara
+)
+
+Connection.create!(
+  user: ariel,
+  contact: augusto
+)
+
+Connection.create!(
+  user: ariel,
+  contact: bruno
+)
+
+Connection.create!(
+  user: ariel,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: ariel,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: ariel,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: ariel,
+  contact: marcos
+)
+
+Connection.create!(
+  user: ariel,
+  contact: carla
+)
+
+Connection.create!(
+  user: ariel,
+  contact: antonio
+)
+
+Connection.create!(
+  user: ariel,
+  contact: chloe
+)
+
+Connection.create!(
+  user: ariel,
+  contact: andre
+)
+
+Connection.create!(
+  user: ariel,
+  contact: yuri
+)
+
+Connection.create!(
+  user: ariel,
+  contact: nema
+)
+
+Connection.create!(
+  user: ariel,
+  contact: viktor
+)
+
+Connection.create!(
+  user: ariel,
+  contact: dani
+)
+
+Connection.create!(
+  user: ariel,
+  contact: douglas
+)
+
+Connection.create!(
+  user: ariel,
+  contact: julia
+)
+
+# Leonardo Contacts
+Connection.create!(
+  user: leonardo,
+  contact: anne
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: ara
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: augusto
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: bruno
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: ariel
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: marcos
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: carla
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: antonio
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: chloe
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: andre
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: yuri
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: nema
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: viktor
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: dani
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: douglas
+)
+
+Connection.create!(
+  user: leonardo,
+  contact: julia
+)
+
+# marcos Contacts
+Connection.create!(
+  user: marcos,
+  contact: anne
+)
+
+Connection.create!(
+  user: marcos,
+  contact: ara
+)
+
+Connection.create!(
+  user: marcos,
+  contact: augusto
+)
+
+Connection.create!(
+  user: marcos,
+  contact: bruno
+)
+
+Connection.create!(
+  user: marcos,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: marcos,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: marcos,
+  contact: ariel
+)
+
+Connection.create!(
+  user: marcos,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: marcos,
+  contact: carla
+)
+
+Connection.create!(
+  user: marcos,
+  contact: antonio
+)
+
+Connection.create!(
+  user: marcos,
+  contact: chloe
+)
+
+Connection.create!(
+  user: marcos,
+  contact: andre
+)
+
+Connection.create!(
+  user: marcos,
+  contact: yuri
+)
+
+Connection.create!(
+  user: marcos,
+  contact: nema
+)
+
+Connection.create!(
+  user: marcos,
+  contact: viktor
+)
+
+Connection.create!(
+  user: marcos,
+  contact: dani
+)
+
+Connection.create!(
+  user: marcos,
+  contact: douglas
+)
+
+Connection.create!(
+  user: marcos,
+  contact: julia
+)
+
+# carla Contacts
+Connection.create!(
+  user: carla,
+  contact: anne
+)
+
+Connection.create!(
+  user: carla,
+  contact: ara
+)
+
+Connection.create!(
+  user: carla,
+  contact: augusto
+)
+
+Connection.create!(
+  user: carla,
+  contact: bruno
+)
+
+Connection.create!(
+  user: carla,
+  contact: pedrinho
+)
+
+Connection.create!(
+  user: carla,
+  contact: pedrao
+)
+
+Connection.create!(
+  user: carla,
+  contact: ariel
+)
+
+Connection.create!(
+  user: carla,
+  contact: leonardo
+)
+
+Connection.create!(
+  user: carla,
+  contact: marcos
+)
+
+Connection.create!(
+  user: carla,
+  contact: antonio
+)
+
+Connection.create!(
+  user: carla,
+  contact: chloe
+)
+
+Connection.create!(
+  user: carla,
+  contact: andre
+)
+
+Connection.create!(
+  user: carla,
+  contact: yuri
+)
+
+Connection.create!(
+  user: carla,
+  contact: nema
+)
+
+Connection.create!(
+  user: carla,
+  contact: viktor
+)
+
+Connection.create!(
+  user: carla,
+  contact: dani
+)
+
+Connection.create!(
+  user: carla,
+  contact: douglas
+)
+
+Connection.create!(
+  user: carla,
+  contact: julia
+)
+
 
 puts "Creating groups..."
 
