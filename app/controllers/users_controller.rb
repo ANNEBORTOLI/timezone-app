@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     end
 
     if @user.update(user_params)
-      redirect_to @user, notice: "User was successfully updated.", allow_other_host: true
+      redirect_to @user, notice: "User was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
