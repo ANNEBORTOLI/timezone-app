@@ -1,6 +1,6 @@
 <div style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1636955816868-fcb881e57954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);">
 
-  <div class="container d-flex mt-2" style="width: 80%">
+  <div class="container d-flex">
     <%# CHAT %>
     <div class="chatroom"
         data-controller="chatroom-subscription"
@@ -30,14 +30,14 @@
     <%# TABLE %>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Group Availability
+      Team Availability
     </button>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Group Availability</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel"><%= @group.title %> Availability</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-fullscreen-xxl-down">
@@ -52,7 +52,7 @@
               <% @availabilities.each do |user| %>
                 <% if user.working_hour_start != nil && user.working_hour_end != nil %>
                 <tr>
-                  <td colspan="25"></td>
+                  <%# <td colspan="25"></td> %>
                 </tr>
 
                 <% if user.working_hour_start < user.working_hour_end %>
