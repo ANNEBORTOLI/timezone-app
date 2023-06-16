@@ -1,8 +1,8 @@
 <div style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1636955816868-fcb881e57954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);">
 
-  <div class="d-flex mt-2 ">
+  <div class="container d-flex mt-2" style="width: 80%">
     <%# CHAT %>
-    <div class="container chatroom chat-container"
+    <div class="chatroom"
         data-controller="chatroom-subscription"
         data-chatroom-subscription-chatroom-id-value="<%= @group.id %>"
         data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
@@ -27,46 +27,69 @@
       <% end %>
     </div>
 
-    <table class="members-table">
-      <tr>
-        <th>Members</th>
-        <% (0..23).each do |hour|%>
-          <th><%= hour %>:00</th>
-        <% end %>
-      </tr>
-      <% @availabilities.each do |user| %>
-      <% if user.working_hour_start != nil && user.working_hour_end != nil %>
-        <tr>
-          <td colspan="25"></td>
-        </tr>
-        <% if user.working_hour_start < user.working_hour_end %>
-          <tr>
-            <td><%="#{user.first_name} #{user.last_name}"%></td>
-            <% (0..user.working_hour_start-1).each do |hour| %>
-              <td>--</td>
-            <% end %>
-            <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
-              <td class="available"></td>
-            <% end %>
-            <% (user.working_hour_end..23).each do |hour| %>
-              <td>--</td>
-            <% end %>
-          </tr>
-          <% else %>
-          <tr>
-            <td><%="#{user.first_name} #{user.last_name}"%></td>
-            <% (0..user.working_hour_end-1).each do |hour| %>
-              <td class="available"></td>
-            <% end %>
-            <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
-              <td>--</td>
-            <% end %>
-            <% (user.working_hour_start..23).each do |hour| %>
-              <td class="available"></td>
-            <% end %>
-          </tr>
-          <% end %>
-        <% end %>
-      <% end %>
-    </table>
+    <%# TABLE %>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Group Availability
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Group Availability</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-fullscreen-xxl-down">
+          <!-- Place the "members-table" div here -->
+            <table class="members-table">
+              <tr>
+                <th>Members</th>
+                <% (0..23).each do |hour|%>
+                  <th><%= hour %>:00</th>
+                <% end %>
+              </tr>
+              <% @availabilities.each do |user| %>
+                <% if user.working_hour_start != nil && user.working_hour_end != nil %>
+                <tr>
+                  <td colspan="25"></td>
+                </tr>
+
+                <% if user.working_hour_start < user.working_hour_end %>
+                  <tr>
+                    <td><%="#{user.first_name} #{user.last_name}"%></td>
+                    <% (0..user.working_hour_start-1).each do |hour| %>
+                      <td>--</td>
+                    <% end %>
+                    <% (user.working_hour_start..user.working_hour_end-1).each do |hour| %>
+                      <td class="available"></td>
+                    <% end %>
+                    <% (user.working_hour_end..23).each do |hour| %>
+                      <td>--</td>
+                    <% end %>
+                  </tr>
+                <% else %>
+                  <tr>
+                    <td><%="#{user.first_name} #{user.last_name}"%></td>
+                    <% (0..user.working_hour_end-1).each do |hour| %>
+                      <td class="available"></td>
+                    <% end %>
+                    <% (user.working_hour_end..user.working_hour_start-1).each do |hour| %>
+                      <td>--</td>
+                    <% end %>
+                    <% (user.working_hour_start..23).each do |hour| %>
+                      <td class="available"></td>
+                    <% end %>
+                  </tr>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
