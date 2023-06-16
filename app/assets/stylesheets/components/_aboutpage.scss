@@ -80,23 +80,18 @@
 }
 
 .textabout {
-
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   position: absolute;
   z-index: 2;
   display: flex;
-
-
-  padding-top: 120px;
+  padding-top: 140px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .columntwo {
-
-
-  font-size: 15px;
+  font-size: 16px;
   text-align: justify;
   position: relative;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -109,29 +104,29 @@
   border-radius: 5px;
   background-color: rgba(255, 255, 255, .15);
   align-self: flex-end;
-  height: 45vh;
+  height: 42vh;
   display: inline-block;
-  width: 80%;
+  width: 87%;
 
   backdrop-filter: blur(5px);
-  margin-left: 50px;
+  margin-left: 40px;
   padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 
 }
 
 .columnone {
   display: inline-block;
-  padding: 10px;
+  padding-right: 20px;
   padding-left: 20px;
-  width:80%;
 
-  height: 45vh;
-  font-size: 15px;
+  width:87%;
+  height: 43vh;
+  font-size: 16px;
   margin-left: 40px;
   text-align: justify;
   position: relative;
-
-
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
@@ -148,7 +143,7 @@
 .titleabout {
   width: 100%;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 80px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bolder;
   font-size: 60px;
@@ -171,11 +166,11 @@
 .titleaboutdos {
   width: 80%;
   text-align: center;
-  margin: 15px 0;
+  margin: 15px 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 18px;
   text-shadow:
       0 1px 0 white,
       0 2px 0 #f6f0f0,
