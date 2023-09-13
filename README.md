@@ -1,4 +1,7 @@
 <!-- PROJECT LOGO -->
+<div align="center">
+<img src="public/images/banner.png">
+</div>
 <br />
 <p align="center">
   <h2 align="center">Timezone App🌍</h2>
@@ -47,6 +50,8 @@
 This project was created to be used by companies with employees in different parts of the world. Its main objective is to foster team collaboration and, consequently, increase productivity by coordinating and comparing team members' availability schedules.
 
 The user will have access to all company employees and will be able to create workgroups where they can communicate through a chat and view a graph displaying their team's availability schedules.
+
+[Check the Timezone App project presentation!](https://www.youtube.com/watch?v=uFSpKCO0Bm8)
 
 ### 🛠️ Technologies
 
