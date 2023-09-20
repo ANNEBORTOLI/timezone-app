@@ -124,6 +124,10 @@ To test the application's features, use the access below:
 
 `user: anne@lewagon.com | password: 123456`
 
+To test features like the Groups Chat, you can access the application simultaneously with the user below:
+
+`user: ara@lewagon.com | password: 123456`
+
 ![Main Page][main-page]
 
 ![Team Chat][team-chat]
