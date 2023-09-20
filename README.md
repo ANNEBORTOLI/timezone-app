@@ -87,22 +87,26 @@ A seguir estão as instruções para a instalação, configuração e uso da API
    git clone https://github.com/ANNEBORTOLI/timezone-app.git
 ```
 
-2. Installing the packages(gems)
+2. Configuration
+   2.1 Create a file in the root of the project, called [.env].
+   2.2 Copy the file contents and enter the new keys [.env.example]
+   <br>
+3. Installing the packages(gems)
 
 ```sh
     bundle install
 ```
 
-3. Run migrations
+4. Run migrations
 
 ```sh
     rails db:migrate
 ```
 
-4. Run seeders
+5. Run seeders
 
 ```sh
-    rails db:migrate
+    rails db:seeds
 ```
 
 5. Executar a API localmente
@@ -111,15 +115,14 @@ A seguir estão as instruções para a instalação, configuração e uso da API
     rails s
 ```
 
-### 💻 Configuration
-
-1. Create a file in the root of the project, called [.env].
-
-2. Copy the file contents and enter the new keys [.env.example]
-
 <!-- USAGE EXAMPLES -->
 
 ## 📸 Usage Examples
+
+All employees of a fictitious company are already registered on the application platform.
+To test the application's features, use the access below:
+
+`user: anne@lewagon.com | password: 123456`
 
 ![Main Page][main-page]
 

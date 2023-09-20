@@ -6,7 +6,6 @@ User.destroy_all
 
 puts "Creating users..."
 
-# TODO: Add Timezone and working_hours
 User.create!(
   first_name: "Bruno",
   last_name: "Fazz",
