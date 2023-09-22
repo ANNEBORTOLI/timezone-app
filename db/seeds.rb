@@ -254,7 +254,6 @@ nema = User.find(15)
 viktor = User.find(16)
 dani = User.find(17)
 douglas = User.find(18)
-
 julia = User.find(19)
 
 puts "Creating connections..."

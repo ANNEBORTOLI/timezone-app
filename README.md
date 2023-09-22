@@ -53,6 +53,17 @@ The user will have access to all company employees and will be able to create wo
 
 [Check the Timezone App project presentation!](https://www.youtube.com/watch?v=uFSpKCO0Bm8)
 
+All employees of a fictitious company are already registered on the application platform.
+To test the application's features, use the access below:
+
+`user: anne@lewagon.com | password: 123456`
+
+To test features like the Groups Chat, you can access the application simultaneously with the user below:
+
+`user: ara@lewagon.com | password: 123456`
+
+[Check or application website!](https://timezone-app-7d2ba652dab0.herokuapp.com/users/sign_in)
+
 ### 🛠️ Technologies
 
 <div>
@@ -77,7 +88,7 @@ The user will have access to all company employees and will be able to create wo
 
 ## :book: General instructions
 
-A seguir estão as instruções para a instalação, configuração e uso da API do projeto.
+Below are the instructions for the installation, configuration, and use of the project's API.
 
 ### :electric_plug: Installation
 
